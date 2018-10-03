@@ -11,24 +11,51 @@ public class Jugador : MonoBehaviour {
     private string estado;
     private Personaje personaje;
     private float poder;
-    private float velocidadMovimiento;
+    private float velocidadMovimiento = 100f;
     private float velocidadAtaque;
 
+    private Rigidbody2D rb;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
-    void Update()
+
+
+    void FixedUpdate()
     {
+        anim.SetFloat("velocidad", Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("velocidadVertical", Mathf.Abs(rb.velocity.y));
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        Vector2 movimiento = new Vector2(moveHorizontal, 0);
+
+        rb.AddForce(movimiento * velocidadMovimiento);
+
+        
+          
+       
+
+        if (Input.GetKeyDown("space"))
+        {
+            saltar();
+        }
+
+
 
     }
 
+    void saltar() {       
 
-
+        Vector2 salto = new Vector2(0, 20);
+        rb.AddForce( salto * velocidadMovimiento);
+    }
 
     public int Id
     {
