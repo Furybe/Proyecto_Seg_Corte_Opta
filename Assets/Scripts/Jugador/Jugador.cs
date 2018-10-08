@@ -36,8 +36,8 @@ public class Jugador : MonoBehaviour {
 
         Vector2 movimiento = new Vector2(moveHorizontal, 0);
 
+        
         rb.AddForce(movimiento * velocidadMovimiento);
-
         
           
        
@@ -47,15 +47,28 @@ public class Jugador : MonoBehaviour {
             saltar();
         }
 
+       
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            recogerTirar();
+        }
 
 
     }
 
     void saltar() {       
 
-        Vector2 salto = new Vector2(0, 20);
+        Vector2 salto = new Vector2(0, 35);
         rb.AddForce( salto * velocidadMovimiento);
+
     }
+
+    public void recogerTirar() {
+
+        anim.SetBool("atacando", true);
+
+    }
+
 
     public int Id
     {

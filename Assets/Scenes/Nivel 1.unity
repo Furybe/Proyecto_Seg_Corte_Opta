@@ -700,6 +700,26 @@ Prefab:
       propertyPath: m_Name
       value: Bloque 5x1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 61484884614704998, guid: 8f5719f02a79eb54abcbbb199cd12245,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 61484884614704998, guid: 8f5719f02a79eb54abcbbb199cd12245,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61484884614704998, guid: 8f5719f02a79eb54abcbbb199cd12245,
+        type: 2}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61484884614704998, guid: 8f5719f02a79eb54abcbbb199cd12245,
+        type: 2}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f5719f02a79eb54abcbbb199cd12245, type: 2}
   m_IsPrefabAsset: 0
@@ -928,8 +948,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9,
     type: 2}
   m_PrefabInternal: {fileID: 1559062938}
---- !u!61 &1127752201
-BoxCollider2D:
+--- !u!70 &1127752201
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -940,19 +960,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.2, y: 3.5}
+  m_Size: {x: 4.6, y: 8}
+  m_Direction: 0
 --- !u!1001 &1189864100
 Prefab:
   m_ObjectHideFlags: 0
