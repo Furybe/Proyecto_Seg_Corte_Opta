@@ -13,6 +13,8 @@ public class Jugador : MonoBehaviour {
     private float poder;
     private float velocidadMovimiento = 100f;
     private float velocidadAtaque;
+    private bool tocandoPared = false;
+    private bool tocandoItem = false;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -38,9 +40,9 @@ public class Jugador : MonoBehaviour {
 
         
         rb.AddForce(movimiento * velocidadMovimiento);
-        
-          
-       
+
+      
+
 
         if (Input.GetKeyDown("space"))
         {
@@ -56,10 +58,14 @@ public class Jugador : MonoBehaviour {
 
     }
 
-    void saltar() {       
+    //funcion de salto
+    void saltar() {
 
-        Vector2 salto = new Vector2(0, 35);
-        rb.AddForce( salto * velocidadMovimiento);
+        if (tocandoPared)
+        {
+            Vector2 salto = new Vector2(0, 35);
+            rb.AddForce(salto * velocidadMovimiento);
+        }
 
     }
 
@@ -68,6 +74,22 @@ public class Jugador : MonoBehaviour {
         anim.SetBool("atacando", true);
 
     }
+
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+       
+            this.tocandoPared = true;
+       
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        this.tocandoPared = false;
+    }
+
 
 
     public int Id
