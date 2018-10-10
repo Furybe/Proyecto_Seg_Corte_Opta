@@ -16,6 +16,8 @@ public class Jugador : MonoBehaviour {
     private bool tocandoPared = false;
     private bool tocandoItem = false;
 
+   
+
     private Rigidbody2D rb;
     private Animator anim;
 
@@ -32,16 +34,25 @@ public class Jugador : MonoBehaviour {
 
     void FixedUpdate()
     {
+        actualizarDireccionSprite();
+
+        if (rb.velocity.magnitude > 100f)
+        {
+            rb.velocity = rb.velocity.normalized * 100f;
+        }
+
+
         anim.SetFloat("velocidad", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("velocidadVertical", Mathf.Abs(rb.velocity.y));
+
+        //variable que toma los inputs horizontales "S", "W" o las flechas derecha, izquierda
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         Vector2 movimiento = new Vector2(moveHorizontal, 0);
 
-        
+        //agregando el movimiento 
         rb.AddForce(movimiento * velocidadMovimiento);
 
-      
 
 
         if (Input.GetKeyDown("space"))
@@ -75,6 +86,23 @@ public class Jugador : MonoBehaviour {
 
     }
 
+    //funcion actualizar dirección sprite
+    public void actualizarDireccionSprite(){
+
+        //actualizar dirección del sprite si se está moviendo hacia la derecha
+        if (rb.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+
+        }
+
+        // cambiar dirección del sprite si se está moviendo hacia la izquierda
+        if(rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+           
+        }
+    }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
