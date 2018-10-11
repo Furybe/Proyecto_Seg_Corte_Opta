@@ -206,6 +206,10 @@ Prefab:
       propertyPath: m_Name
       value: Hongo Super1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1814943916456546, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
+      propertyPath: m_TagString
+      value: hongo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
   m_IsPrefabAsset: 0
@@ -440,6 +444,10 @@ Prefab:
       propertyPath: m_Name
       value: Hongo Normal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1591912051292330, guid: 1438202c774cdf9408ad7160c947745e, type: 2}
+      propertyPath: m_TagString
+      value: hongo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1438202c774cdf9408ad7160c947745e, type: 2}
   m_IsPrefabAsset: 0
@@ -527,6 +535,10 @@ Prefab:
     - target: {fileID: 4244885999785098, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814943916456546, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
+      propertyPath: m_TagString
+      value: hongo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
@@ -1122,6 +1134,22 @@ Prefab:
       propertyPath: m_Name
       value: Jugador
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010141028922, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 722924ec8a0056f4a8fb443b2fb65ff9, type: 2}
   m_IsPrefabAsset: 0
@@ -1167,6 +1195,22 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa768e489fb72743b0a6c5560995f01, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1696471586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1591912051292330, guid: 1438202c774cdf9408ad7160c947745e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2146452858}
+--- !u!114 &1696471587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696471586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae43f0d631719fc419951c27ae09fc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1728868088
 Prefab:
   m_ObjectHideFlags: 0
@@ -1393,6 +1437,10 @@ Prefab:
     - target: {fileID: 1814943916456546, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
       propertyPath: m_Name
       value: Hongo Super1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814943916456546, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
+      propertyPath: m_TagString
+      value: hongo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2fb1ea8e1d5e77418997efc0118feb2, type: 2}
@@ -1750,6 +1798,10 @@ Prefab:
     - target: {fileID: 4020042291605936, guid: 1438202c774cdf9408ad7160c947745e, type: 2}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591912051292330, guid: 1438202c774cdf9408ad7160c947745e, type: 2}
+      propertyPath: m_TagString
+      value: hongo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1438202c774cdf9408ad7160c947745e, type: 2}
