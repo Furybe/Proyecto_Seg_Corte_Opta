@@ -36,6 +36,7 @@ public class Jugador : MonoBehaviour {
     {
         actualizarDireccionSprite();
 
+        //mantener velocidad máxima
         if (rb.velocity.magnitude > 100f)
         {
             rb.velocity = rb.velocity.normalized * 100f;
@@ -110,12 +111,11 @@ public class Jugador : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-       
-            this.tocandoPared = true;
+        this.tocandoPared = true;
+
         if (collision.gameObject.tag=="hongo")
         {
             collision.gameObject.GetComponent<Hongo>().dropearItems();
-            
 
         }
        

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Objeto : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    protected int id;
+    protected string nombre;
+    protected string descripcion;
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +18,45 @@ public class Objeto : MonoBehaviour {
 	void FixedUpdate () {
 		
 	}
+
+
+
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+
+        set
+        {
+            id = value;
+        }
+    }
+
+    public string Nombre
+    {
+        get
+        {
+            return nombre;
+        }
+
+        set
+        {
+            nombre = value;
+        }
+    }
+
+    public string Descripcion
+    {
+        get
+        {
+            return descripcion;
+        }
+
+        set
+        {
+            descripcion = value;
+        }
+    }
 }
