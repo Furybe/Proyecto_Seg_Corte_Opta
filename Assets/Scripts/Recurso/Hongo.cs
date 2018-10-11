@@ -5,11 +5,12 @@ using UnityEngine;
 public class Hongo : Recurso {
 
 
-    private List<Objeto> objectosDropeados;
-    private int salud = 30;
+    protected List<Objeto> objectosDropeados = new List<Objeto>();
+    protected int salud = 30;
 	// Use this for initialization
 	void Start () {
 		
+    
 	}
 	
 	// Update is called once per frame
@@ -22,11 +23,11 @@ public class Hongo : Recurso {
         this.salud = salud - 10;
         if (this.salud==0)
         {
-            dropearItems();
+            DropearItems();
         }
     }
 
-    public void dropearItems()
+    public  void DropearItems()
     {
         Debug.Log("dropeado");
 

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4244885999785098}
   - component: {fileID: 212517076606270766}
   - component: {fileID: 61230712118005934}
+  - component: {fileID: 114230009744630568}
   m_Layer: 0
   m_Name: Hongo Super
   m_TagString: Untagged
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.828125, y: 3.203125}
   m_EdgeRadius: 0
+--- !u!114 &114230009744630568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814943916456546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5928ab3efce1b8c4e89b04620347d146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pocionAzul: {fileID: 0}
 --- !u!212 &212517076606270766
 SpriteRenderer:
   m_ObjectHideFlags: 1

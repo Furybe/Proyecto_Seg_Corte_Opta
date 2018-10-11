@@ -115,7 +115,7 @@ public class Jugador : MonoBehaviour {
 
         if (collision.gameObject.tag=="hongo")
         {
-            collision.gameObject.GetComponent<Hongo>().dropearItems();
+            collision.gameObject.GetComponent<HongoSuper>().DropearItems();
 
         }
        
