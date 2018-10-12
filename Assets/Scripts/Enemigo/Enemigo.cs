@@ -24,6 +24,7 @@ public class Enemigo : MonoBehaviour {
 
     }
 
+    
 
     public int Id
     {

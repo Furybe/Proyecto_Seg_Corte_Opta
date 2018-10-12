@@ -6,6 +6,9 @@ TagManager:
   tags:
   - terreno
   - hongo
+  - hongo super
+  - hongo normal
+  - jugador
   layers:
   - Default
   - TransparentFX

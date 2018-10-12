@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class HongoNormal : Hongo {
 
-    public GameObject pocionAzul;
+    //public GameObject pocionAzul;
 
     // Use this for inistialization
     void Start()
     {
 
-        PocionAzul pocionAzul = new PocionAzul();
-        this.objectosDropeados.Add(pocionAzul);
+     
     }
 
     // Update is called once per frame
@@ -20,10 +19,5 @@ public class HongoNormal : Hongo {
 
     }
 
-    public void DropearItems()
-    {
-        Debug.Log("dropeado");
-        Instantiate(pocionAzul, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-    }
+  
 }

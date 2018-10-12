@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Hongo : Recurso {
 
-
-    protected List<Objeto> objectosDropeados = new List<Objeto>();
+    [SerializeField]
+    protected  GameObject [] objetosDropeados = new GameObject[3];
+    
     protected int salud = 30;
+    
+ 
+
+
 	// Use this for initialization
 	void Start () {
-		
+
     
 	}
 	
@@ -17,6 +22,17 @@ public class Hongo : Recurso {
 	void FixedUpdate () {
 		
 	}
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "jugador")
+        {
+            this.DropearItems();
+        }
+    }
+
+
 
     public void bajarSalud()
     {
@@ -29,10 +45,18 @@ public class Hongo : Recurso {
 
     public  void DropearItems()
     {
-        Debug.Log("dropeado");
+   
 
+        for (int i = 0; i < this.objetosDropeados.Length; i++)
+        {
+            Instantiate(this.objetosDropeados[i], transform.position, Quaternion.identity);
+        }
+        
         Destroy(gameObject);
+   
     }
+
+
 
 
 }

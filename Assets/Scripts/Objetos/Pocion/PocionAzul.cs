@@ -15,4 +15,6 @@ public class PocionAzul : Pocion {
 	void Update () {
 		
 	}
+   
 }
+

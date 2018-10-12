@@ -106,21 +106,13 @@ public class Jugador : MonoBehaviour {
     }
 
     //funcion para obtener recursos
-    
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-
         this.tocandoPared = true;
-
-        if (collision.gameObject.tag=="hongo")
-        {
-            collision.gameObject.GetComponent<HongoSuper>().DropearItems();
-
-        }
-       
-        
     }
+
 
     private void OnCollisionExit2D(Collision2D collision)
     {
