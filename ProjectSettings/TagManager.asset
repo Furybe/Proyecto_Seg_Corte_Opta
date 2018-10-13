@@ -9,6 +9,7 @@ TagManager:
   - hongo super
   - hongo normal
   - jugador
+  - cofre
   layers:
   - Default
   - TransparentFX
