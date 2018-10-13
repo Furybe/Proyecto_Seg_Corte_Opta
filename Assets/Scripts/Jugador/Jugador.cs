@@ -87,6 +87,7 @@ public class Jugador : MonoBehaviour {
 
     }
 
+    
     //funcion actualizar dirección sprite
     public void actualizarDireccionSprite(){
 
