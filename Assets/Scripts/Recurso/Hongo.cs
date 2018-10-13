@@ -20,7 +20,7 @@ public class Hongo : Recurso {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
+	 	
 	}
 
 
@@ -31,6 +31,7 @@ public class Hongo : Recurso {
             this.DropearItems();
         }
     }
+
 
 
 
