@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class x : MonoBehaviour {
+public class Cosumible : Objeto {
 
 	// Use this for initialization
 	void Start () {
@@ -13,4 +13,11 @@ public class x : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //funcion para consumir el objeto, se genera el efecto dado por el consumible
+    //esta función debe ser lanzada desde un objeto jugador
+    void Consumir()
+    {
+
+    }
 }

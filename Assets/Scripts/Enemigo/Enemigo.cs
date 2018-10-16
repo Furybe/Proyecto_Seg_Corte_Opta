@@ -17,8 +17,11 @@ public class Enemigo : MonoBehaviour {
     //variable usada para representar el tiempo de espera para lanzar una habilidad de nuevo
     private float delay;
 
-    //salud
+    //representa la salud que posee el enemigo en el juego
     private int salud;
+
+    //variable para especificar aquellos enemigos que son destruibles dentro del juego y los que no
+    private bool destruible;
 
     // Use this for initialization
     void Start()
@@ -40,6 +43,12 @@ public class Enemigo : MonoBehaviour {
 
     //funcion activada se recibe daño del ataque de un jugador
     void recibirDaño()
+    {
+
+    }
+
+    //funcion para eliminar el objeto del juego, principalmente usado cualdo el valor de la salud sea 0
+    void destruir()
     {
 
     }
@@ -96,7 +105,29 @@ public class Enemigo : MonoBehaviour {
         }
     }
 
+    public int Salud
+    {
+        get
+        {
+            return salud;
+        }
 
+        set
+        {
+            salud = value;
+        }
+    }
 
-  
+    public bool Destruible
+    {
+        get
+        {
+            return destruible;
+        }
+
+        set
+        {
+            destruible = value;
+        }
+    }
 }
