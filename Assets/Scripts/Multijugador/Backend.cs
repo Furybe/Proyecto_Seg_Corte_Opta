@@ -70,8 +70,10 @@ public class Backend : MonoBehaviour {
             else
             {
                 Debug.Log("Form upload complete!");
-            }
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
+
         }
+    }
 
     void ingresar()
     {
