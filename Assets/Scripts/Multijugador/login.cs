@@ -22,13 +22,14 @@ public class web : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+
     }
 
     IEnumerator GetText()
     {
         using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8000/api/usuarios"))
         {
-            yield return www.Send();
+            yield return www.SendWebRequest();
 
             if (www.isNetworkError || www.isHttpError)
             {
