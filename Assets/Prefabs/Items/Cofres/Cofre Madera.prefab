@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95355782620779148}
   - component: {fileID: 61811464486850194}
   m_Layer: 0
-  m_Name: Cofre1
+  m_Name: Cofre Madera
   m_TagString: cofre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
