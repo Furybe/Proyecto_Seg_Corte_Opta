@@ -78,7 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32630331c79c4b645a812955c67f8111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pocionAzul: {fileID: 0}
+  objetosDropeados:
+  - {fileID: 1449153038688742, guid: de34f96ee0f8f004d992d78d2336c331, type: 2}
+  - {fileID: 1959466802852448, guid: f57f83b938de5ba4e9626df5b3697778, type: 2}
+  - {fileID: 1060353805668134, guid: 63cbd95b0a2cde14c90ad6df5a36f040, type: 2}
 --- !u!212 &212540039569868886
 SpriteRenderer:
   m_ObjectHideFlags: 1
