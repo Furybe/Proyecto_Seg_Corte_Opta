@@ -5,23 +5,28 @@ using UnityEngine.UI;
 
 public class ControladorZona : MonoBehaviour {
 
-	public RectTransform asd;
-	private string timer;
-	// Use this for initialization
-	void Awake () {
-		timer = ""+ Time.timeSinceLevelLoad.ToString("f0");
+	public RectTransform panelIzq;
+	public RectTransform panelDer;
+	public Animator animIzq;
+	public Animator animDer;
+	private float tiempo;
+
+    // Use this for initialization
+    void Start () {
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(timer);
-		if (timer == "5" || timer == "20" || timer == "25")
+		tiempo = (int)Time.timeSinceLevelLoad;
+		if ((int)Time.timeSinceLevelLoad > 15)
 		{
-			zona();
+			MoverZona();
 		}
 	}
-	private void zona(){
-
-		asd.transform.localScale = new Vector3(-20f,0,0);
+	private void MoverZona()
+	{
+		animIzq.SetBool("MoverZona", true);
+		animDer.SetBool("MoverZona", true);
 	}
 }
