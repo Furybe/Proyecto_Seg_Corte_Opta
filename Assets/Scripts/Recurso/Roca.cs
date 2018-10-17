@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piedra : Recurso {
+public class Roca : Recurso {
 
     [SerializeField]
     private GameObject martillito;
