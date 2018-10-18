@@ -1,32 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ControladorZona : MonoBehaviour {
 
-	public RectTransform panelIzq;
-	public RectTransform panelDer;
-	public Animator animIzq;
-	public Animator animDer;
-	private float tiempo;
+	public Transform panelDer;
+	public Transform panelIzq;
+	private float t;
+	private Vector3 posInicialD;
+	private Vector3 objetivoD = new Vector3(20f,0f,0f);
+	private Vector3 posInicialI;
+	private Vector3 objetivoI = new Vector3(5f,0f,0f);
+	private float tiempoParaAlcanzarObjetivo = 500f;
 
     // Use this for initialization
     void Start () {
-		
+		posInicialD = panelDer.transform.position;
+		posInicialI = panelIzq.transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		tiempo = (int)Time.timeSinceLevelLoad;
-		if ((int)Time.timeSinceLevelLoad > 15)
-		{
-			MoverZona();
-		}
-	}
-	private void MoverZona()
-	{
-		animIzq.SetBool("MoverZona", true);
-		animDer.SetBool("MoverZona", true);
+		t += Time.deltaTime / tiempoParaAlcanzarObjetivo;
+		panelDer.transform.position = Vector3.Lerp(posInicialD, objetivoD, t);
+		panelIzq.transform.position = Vector3.Lerp(posInicialI, objetivoI, t);
 	}
 }
