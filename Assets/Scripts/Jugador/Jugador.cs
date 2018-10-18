@@ -148,6 +148,15 @@ public class Jugador : MonoBehaviour {
         this.tocandoPared = false;
     }
 
+    //metodo para aplicar daño si el jugador está dentro de la zona
+	private void OnTriggerEnter2D(Collider2D col){
+		if (col.gameObject.tag == "zona")
+		{
+            //se ejecuta metodo para bajar la vida
+            //metodoBajarVida();
+			Debug.Log("El jugador está dentro de la zona AAAAAAAAAAAAAAAAAAAAAA");
+		}
+	}
 
 
     //getters y setters de las propiedades

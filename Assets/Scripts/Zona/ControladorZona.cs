@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControladorZona : MonoBehaviour {
-
+	
+	//atributos - propiedades
 	public Transform panelDer;
 	public Transform panelIzq;
 	private float t;
@@ -11,7 +12,7 @@ public class ControladorZona : MonoBehaviour {
 	private Vector3 objetivoD = new Vector3(20f,0f,0f);
 	private Vector3 posInicialI;
 	private Vector3 objetivoI = new Vector3(5f,0f,0f);
-	private float tiempoParaAlcanzarObjetivo = 500f;
+	private float tiempoParaAlcanzarObjetivo = 499f;
 
     // Use this for initialization
     void Start () {
