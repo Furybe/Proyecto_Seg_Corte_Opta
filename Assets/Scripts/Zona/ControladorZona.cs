@@ -12,7 +12,7 @@ public class ControladorZona : MonoBehaviour {
 	private Vector3 objetivoD = new Vector3(20f,0f,0f);
 	private Vector3 posInicialI;
 	private Vector3 objetivoI = new Vector3(5f,0f,0f);
-	private float tiempoParaAlcanzarObjetivo = 499f;
+	private float tiempoParaAlcanzarObjetivo = 400f;
 
     // Use this for initialization
     void Start () {
@@ -26,4 +26,8 @@ public class ControladorZona : MonoBehaviour {
 		panelDer.transform.position = Vector3.Lerp(posInicialD, objetivoD, t);
 		panelIzq.transform.position = Vector3.Lerp(posInicialI, objetivoI, t);
 	}
+
+   
+
+
 }

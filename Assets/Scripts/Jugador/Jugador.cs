@@ -11,7 +11,7 @@ public class Jugador : MonoBehaviour {
     private int id;
 
     //atributo para controlar la salud del jugador
-    private int salud;
+    private float salud;
     
     //permite controlar el estado del jugador (vivo, muerto, etc)
     private string estado;
@@ -41,6 +41,10 @@ public class Jugador : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        //inicializando propiedades 
+        this.estado = "vivo";
+        this.salud = 100;
+
         //inicializando el rigidbbody
         rb = GetComponent<Rigidbody2D>();
 
@@ -54,6 +58,9 @@ public class Jugador : MonoBehaviour {
 
     void FixedUpdate()
     {
+        //comprobamos si el jugador está vivo
+        comprobarVidaJugador();
+
         //permite cambiar la direccion hacia la cual està mirando el personaje
         actualizarDireccionSprite();
 
@@ -63,11 +70,16 @@ public class Jugador : MonoBehaviour {
             rb.velocity = rb.velocity.normalized * 100f;
         }
 
+        //animaciones 
+
         //lanzando animacion correr
         anim.SetFloat("velocidad", Mathf.Abs(rb.velocity.x));
         
         //lanzando animaciòn saltar
         anim.SetFloat("velocidadVertical", Mathf.Abs(rb.velocity.y));
+
+        //lanzando animacion morir
+        anim.SetFloat("salud", salud);
 
         //variable que toma los inputs horizontales "S", "W" o las flechas derecha, izquierda
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -149,15 +161,39 @@ public class Jugador : MonoBehaviour {
     }
 
     //metodo para aplicar daño si el jugador está dentro de la zona
-	private void OnTriggerEnter2D(Collider2D col){
-		if (col.gameObject.tag == "zona")
-		{
-            //se ejecuta metodo para bajar la vida
-            //metodoBajarVida();
-			Debug.Log("El jugador está dentro de la zona AAAAAAAAAAAAAAAAAAAAAA");
-		}
-	}
 
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "zona")
+        {
+            //se ejecuta metodo para bajar la vida
+            recibirDaño(0.1f);
+
+            Debug.Log("El jugador está dentro de la zona AAAAAAAAAAAAAAAAAAAAAA");
+        }
+
+    }
+
+    public void recibirDaño(float daño)
+    {
+        Debug.Log(salud);
+        this.Salud = this.salud - daño;
+        
+    }
+
+    public void recibirDañoJuador()
+    {
+
+    }
+
+    public void comprobarVidaJugador()
+    {
+        if (this.salud <= 0)
+        {
+            this.estado = "muerto";
+        }
+    }
 
     //getters y setters de las propiedades
 
@@ -174,7 +210,7 @@ public class Jugador : MonoBehaviour {
         }
     }
 
-    public int Salud
+    public float Salud
     {
         get
         {
