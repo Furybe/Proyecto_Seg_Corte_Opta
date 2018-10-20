@@ -14,7 +14,7 @@ public class Hierro : Recurso {
 
         //inicializamos propiedades
         this.cantidadMaterial = 200;
-        this.nombreMaterial = "madera";
+        this.nombreMaterial = "metal";
     }
 
     // Update is called once per frame

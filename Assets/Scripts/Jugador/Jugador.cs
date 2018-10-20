@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour {
 
@@ -9,10 +10,8 @@ public class Jugador : MonoBehaviour {
 
     //atributo identificador de jugador
     private int id;
-
     //atributo para controlar la salud del jugador
     private float salud;
-
     //permite controlar el estado del jugador (vivo, muerto, etc)
     private string estado;
 
@@ -21,10 +20,8 @@ public class Jugador : MonoBehaviour {
 
     //atributo que controla el daño que puede hacer el jugador
     private float poder;
-
     //atributo para controlar la velocidad maxima de movimiento
     private float velocidadMovimiento = 100f;
-
     //atroibuto para controlar la velocidad de ataque del personaje
     private float velocidadAtaque;
 
@@ -32,6 +29,16 @@ public class Jugador : MonoBehaviour {
     private int madera;
     private int piedra;
     private int metal;
+
+    //textos para cantidad de materiales
+    [SerializeField]
+    private Text textoMadera;
+
+    [SerializeField]
+    private Text textoPiedra;
+
+    [SerializeField]
+    private Text textoMetal;
 
     //atributo para controlar cuando existen collisiones con las paredes e items
     private bool tocandoPared = false;
@@ -56,12 +63,17 @@ public class Jugador : MonoBehaviour {
         this.metal = 0;
         this.piedra = 0;
 
+        //inicializando textos
+        this.textoMadera.text = madera.ToString();
+        this.textoMetal.text = metal.ToString();
+        this.textoPiedra.text = piedra.ToString();
 
         //inicializando el rigidbbody
         rb = GetComponent<Rigidbody2D>();
 
         //inicializando el animator
         anim = GetComponent<Animator>();
+
 
     }
 
@@ -70,6 +82,9 @@ public class Jugador : MonoBehaviour {
 
     void FixedUpdate()
     {
+        //actualizar texto materiales
+        actualizarTextoMateriales();
+
         //comprobamos si el jugador está vivo
         comprobarVidaJugador();
 
@@ -139,6 +154,13 @@ public class Jugador : MonoBehaviour {
         this.estado = "farmeando";
     }
 
+    //actualizarTextoMateriales
+    void actualizarTextoMateriales()
+    {
+        this.textoMadera.text = madera.ToString();
+        this.textoMetal.text = metal.ToString();
+        this.textoPiedra.text = piedra.ToString();
+    }
 
     //funcion actualizar dirección sprite
     public void actualizarDireccionSprite() {
