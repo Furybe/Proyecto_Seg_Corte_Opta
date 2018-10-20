@@ -123,13 +123,21 @@ public class Jugador : MonoBehaviour {
         {
             //se ejecuta la funciòn saltar
             saltar();
+            
         }
 
-        //condicional para capturar cuando se oprime la tecla "L"
-        if (Input.GetKeyDown(KeyCode.L))
+        //condicional para iniciar estado farmear
+        if (Input.GetKey(KeyCode.L))
         {
             //se ejecuta la funcion recoger- tirar
-            recogerTirar();
+            farmear();
+        }
+
+        //condicional para salir del estado de farmeo
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararFarmear();
         }
 
 
@@ -148,10 +156,16 @@ public class Jugador : MonoBehaviour {
     }
 
     //función de recoger - tirar items (por implementar)
-    public void recogerTirar() {
+    public void farmear() {
 
         anim.SetBool("atacando", true);
         this.estado = "farmeando";
+    }
+
+    public void pararFarmear()
+    {
+        anim.SetBool("atacando", false);
+        this.estado = "vivo";
     }
 
     //actualizarTextoMateriales
@@ -204,7 +218,7 @@ public class Jugador : MonoBehaviour {
             //se ejecuta metodo para bajar la vida
             recibirDaño(0.1f);
 
-            Debug.Log("El jugador está dentro de la zona AAAAAAAAAAAAAAAAAAAAAA");
+           
         }
 
     }

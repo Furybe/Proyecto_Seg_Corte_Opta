@@ -11,7 +11,7 @@ public class Roca : Recurso {
     void Start () {
 
         this.nombreMaterial = "piedra";
-        this.cantidadMaterial = 300;
+        this.cantidadMaterial = 200;
 
         //desactivamos el objeto martillito
         this.martillito.SetActive(false);
