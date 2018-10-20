@@ -61,7 +61,7 @@ public class PersonajeMultiplayer : MonoBehaviour {
             estado = value;
         }
     }
-
+    
 
    
    

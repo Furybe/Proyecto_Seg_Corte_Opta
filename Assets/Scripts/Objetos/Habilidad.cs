@@ -4,8 +4,58 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    // variable de identificación de la habilidad
+    private int id;
+
+    //nombre de la habilidad, mostrado en el mapa
+    private string nombre;
+
+    //descripción de lo que hace la habilidad
+    private string descripcion;
+
+    public string Nombre
+    {
+        get
+        {
+            return nombre;
+        }
+
+        set
+        {
+            nombre = value;
+        }
+    }
+
+    public string Descripcion
+    {
+        get
+        {
+            return descripcion;
+        }
+
+        set
+        {
+            descripcion = value;
+        }
+    }
+
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+
+        set
+        {
+            id = value;
+        }
+    }
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +63,10 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //ejecuta la habilidad correspondiente
+    void ejecutarHabilidad()
+    {
+
+    }
 }

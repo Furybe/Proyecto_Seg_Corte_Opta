@@ -12,7 +12,8 @@ public class TiempoJuego : MonoBehaviour {
 	//Esta variable tipo string es la que va al metodo que lo sube a la DB
 	//El valor se pasa a entero y se divide entre 3600 para saber el tiempo total de juego en H
 	private string tiempoDeJuego;
-	void Awake () {
+	
+	void Start () {
 		
 	}
 	

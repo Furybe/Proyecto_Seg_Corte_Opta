@@ -10,6 +10,7 @@ TagManager:
   - hongo normal
   - jugador
   - cofre
+  - zona
   layers:
   - Default
   - TransparentFX
