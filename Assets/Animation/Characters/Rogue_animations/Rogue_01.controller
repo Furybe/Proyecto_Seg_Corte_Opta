@@ -424,7 +424,11 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102000012107980820}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Position: {x: 180, y: 324, z: 0}
+=======
+    m_Position: {x: 180, y: 336, z: 0}
+>>>>>>> a39e30a6abd790e471fbf9fdb76aafa7165093ea
 =======
     m_Position: {x: 180, y: 336, z: 0}
 >>>>>>> a39e30a6abd790e471fbf9fdb76aafa7165093ea
