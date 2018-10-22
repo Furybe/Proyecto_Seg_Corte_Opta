@@ -19,17 +19,6 @@ public class Pocion : Objeto {
 		
 	}
 
-    protected Habilidad Habilidad
-    {
-        get
-        {
-            return habilidad;
-        }
 
-        set
-        {
-            habilidad = value;
-        }
-    }
 
 }
