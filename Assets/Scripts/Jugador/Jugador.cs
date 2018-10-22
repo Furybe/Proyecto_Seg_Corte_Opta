@@ -141,6 +141,31 @@ public class Jugador : MonoBehaviour {
         }
 
 
+        //condicional para iniciar estado recoger
+        if (Input.GetKey(KeyCode.J))
+        {
+            //se ejecuta la funcion recoger- tirar
+            recogerItems();
+        }
+
+        //condicional para salir del estado de recoger
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararRecogerItems();
+
+        }
+
+
+    }
+
+    public void recogerItems()
+    {
+        this.estado = "recogiendo";
+    }
+    public void pararRecogerItems()
+    {
+        this.estado = "vivo";
     }
 
     //funcion de salto
@@ -242,6 +267,10 @@ public class Jugador : MonoBehaviour {
             this.estado = "muerto";
         }
     }
+
+
+  
+
 
     //metodo para recibir materiales de los recursos
     public void recibirMaterial(string tipoMaterial, int cantidad)

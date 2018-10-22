@@ -21,7 +21,7 @@ public class Puntuacion : MonoBehaviour {
 	void Update () {
 		if (jugador.Salud < 100)
 		{
-			Debug.Log("EL jugador esta perdiendo vida");
+			//Debug.Log("EL jugador esta perdiendo vida");
 			puntuacion();
 		}
 		
