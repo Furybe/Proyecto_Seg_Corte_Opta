@@ -11,9 +11,7 @@ public class FuegoRojo : Habilidad {
 	// Use this for initialization
 	void Start () {
         this.Daño = 20;
-
         rb = GetComponent<Rigidbody2D>();
-        //gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -22,14 +20,26 @@ public class FuegoRojo : Habilidad {
 	}
 
 
-    public void lanzar(int idJugador, Transform transformJugador)
+    public void lanzar(int idJugador, Transform transformJugador, float direccion)
     {
         
-        gameObject.SetActive(true);
+        
         gameObject.transform.position = transformJugador.position;
+ 
         this.IdEjecutor = idJugador;
+        if (direccion==1)
+        {
+            rb.AddForce(transform.right * 4000f);
 
-        rb.AddForce(transform.right * 4000f);
+        }
+        else
+        {
+            //agregamos la fuerza al gameobject
+            rb.AddForce(-transform.right* 4000f);
+            
+            //giramos el gameObject para que la animación se vea correcta
+            transform.localScale=new Vector3(-1, 1, 1);
+        }
         Debug.Log("habilidad lanzada");
     }
 
@@ -43,7 +53,7 @@ public class FuegoRojo : Habilidad {
             }
             
         }
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 
 }

@@ -187,7 +187,7 @@ public class Jugador : MonoBehaviour {
         //habilidad fuego rojo
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            this.inventario.consumirObjeto("pocionRoja", 1 , gameObject.transform);
+            this.inventario.consumirObjeto("pocionRoja", 1 , gameObject.transform, transform.localScale.x);
             Debug.Log("se ha presionado la tecla 1");
         }
 

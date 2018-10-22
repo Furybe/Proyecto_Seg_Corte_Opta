@@ -38,14 +38,15 @@ public class PocionRoja : Pocion {
     }
 
 
-    public void consumir(int idJugador, Transform transformJugador)
+    public void consumir(int idJugador, Transform transformJugador, float direccion)
     {
 
-        Instantiate(habilidad);
+        GameObject fuegoRojo = Instantiate(habilidad);
         //habilidad.SetActive(true);
 
-       habilidad.GetComponent<FuegoRojo>().lanzar(idJugador,transformJugador);
-    
+        //habilidad.GetComponent<FuegoRojo>().lanzar(idJugador,transformJugador);
+        fuegoRojo.GetComponent<FuegoRojo>().lanzar(idJugador, transformJugador, direccion);
+
     }
 
 

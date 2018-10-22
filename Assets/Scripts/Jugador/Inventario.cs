@@ -38,15 +38,16 @@ public class Inventario : MonoBehaviour {
         }
     }
 
-    public void consumirObjeto(string nombreObjeto, int idJugador, Transform posicion)
+    public void consumirObjeto(string nombreObjeto, int idJugador, Transform posicion, float direccion)
     {
         switch (nombreObjeto)
         {
             case "pocionRoja":
                 if (pocionesRojas.Count>0)
                 {
-                    pocionesRojas[0].GetComponent<PocionRoja>().consumir(idJugador,transform);
-                   // pocionesRojas.RemoveAt(0);
+
+                    pocionesRojas[0].GetComponent<PocionRoja>().consumir(idJugador,transform, direccion);
+                    pocionesRojas.RemoveAt(0);
                 }
                 break;
             default:
