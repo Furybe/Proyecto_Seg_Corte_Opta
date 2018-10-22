@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FuegoRojo : Habilidad {
 
+    [SerializeField]
     private Rigidbody2D rb;
 
 
