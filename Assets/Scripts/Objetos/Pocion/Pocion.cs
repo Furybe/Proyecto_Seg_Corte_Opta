@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Pocion : Objeto {
 
-
-    private Habilidad habilidad;
+    
 
     
 

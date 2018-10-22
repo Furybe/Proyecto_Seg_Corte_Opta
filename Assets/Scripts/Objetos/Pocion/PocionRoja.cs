@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PocionRoja : Pocion {
 
+    [SerializeField]
+    private GameObject habilidad;
+
     // Use this for initialization
     void Start()
     {
 
         this.nombre = "Poción Roja";
         this.descripcion = "Esta mágica poción permite obtener poderes inimaginables sobre el Fuego";
-        this.Habilidad = new FuegoRojo();
 
     }
 
@@ -22,6 +24,6 @@ public class PocionRoja : Pocion {
 
     void consumir()
     {
-        this.Habilidad.lanzar();
+        Instantiate(this.habilidad);
     }
 }
