@@ -21,7 +21,7 @@ public class PocionRoja : Pocion {
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         //si hace trigger enter con un jugador
         if (col.tag == "jugador")

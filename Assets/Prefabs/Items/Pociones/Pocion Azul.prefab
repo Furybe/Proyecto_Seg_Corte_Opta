@@ -23,9 +23,11 @@ GameObject:
   - component: {fileID: 58077536170613068}
   - component: {fileID: 70550129564873286}
   - component: {fileID: 50437251617656078}
+  - component: {fileID: 58752964405740704}
+  - component: {fileID: 114114680573847134}
   m_Layer: 0
   m_Name: Pocion Azul
-  m_TagString: Untagged
+  m_TagString: pocionAzul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1959466802852448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.29, z: 0}
+  m_LocalPosition: {x: -24.58, y: 74.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,6 +80,21 @@ CircleCollider2D:
   m_Offset: {x: -0.06, y: -0.07}
   serializedVersion: 2
   m_Radius: 1.1
+--- !u!58 &58752964405740704
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959466802852448}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5
 --- !u!70 &70550129564873286
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -93,6 +110,17 @@ CapsuleCollider2D:
   m_Offset: {x: -0.98, y: 0.77}
   m_Size: {x: 1.18, y: 0.84}
   m_Direction: 0
+--- !u!114 &114114680573847134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959466802852448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c04f11cd338863e408ba4b35049db6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212837468251190686
 SpriteRenderer:
   m_ObjectHideFlags: 1

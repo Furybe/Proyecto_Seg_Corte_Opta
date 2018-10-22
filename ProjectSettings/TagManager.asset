@@ -11,6 +11,8 @@ TagManager:
   - jugador
   - cofre
   - zona
+  - pocionRoja
+  - pocionAzul
   layers:
   - Default
   - TransparentFX

@@ -97,6 +97,64 @@ public class Jugador : MonoBehaviour {
             rb.velocity = rb.velocity.normalized * 100f;
         }
 
+        //condicion para cuando el jugardor presione la tecla "space"
+        if (Input.GetKeyDown("space"))
+        {
+            //se ejecuta la funciòn saltar
+            saltar();
+
+        }
+
+        //condicional para iniciar estado farmear
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararFarmear();
+        }
+
+
+        //condicional para salir del estado de farmeo
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararFarmear();
+        } 
+
+        //condicional para iniciar estado farmear
+        if (Input.GetKey(KeyCode.L))
+        {
+            //se ejecuta la funcion recoger- tirar
+            farmear();
+        }
+
+
+
+
+        //condicional para salir del estado de recoger
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararRecogerItems();
+
+        }
+
+
+        //condicional para iniciar estado recoger
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            //se ejecuta la funcion recoger- tirar
+            pararRecogerItems();
+        }
+
+
+        //condicional para iniciar estado recoger
+        if (Input.GetKey(KeyCode.J))
+        {
+            //se ejecuta la funcion recoger- tirar
+            recogerItems();
+        }
+
+
         //animaciones 
 
         //lanzando animacion correr
@@ -118,43 +176,7 @@ public class Jugador : MonoBehaviour {
         rb.AddForce(movimiento * velocidadMovimiento);
 
 
-        //condicion para cuando el jugardor presione la tecla "space"
-        if (Input.GetKeyDown("space"))
-        {
-            //se ejecuta la funciòn saltar
-            saltar();
-            
-        }
-
-        //condicional para iniciar estado farmear
-        if (Input.GetKey(KeyCode.L))
-        {
-            //se ejecuta la funcion recoger- tirar
-            farmear();
-        }
-
-        //condicional para salir del estado de farmeo
-        if (Input.GetKeyUp(KeyCode.L))
-        {
-            //se ejecuta la funcion recoger- tirar
-            pararFarmear();
-        }
-
-
-        //condicional para iniciar estado recoger
-        if (Input.GetKey(KeyCode.J))
-        {
-            //se ejecuta la funcion recoger- tirar
-            recogerItems();
-        }
-
-        //condicional para salir del estado de recoger
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            //se ejecuta la funcion recoger- tirar
-            pararRecogerItems();
-
-        }
+      
 
 
     }
