@@ -15,6 +15,14 @@ public class Jugador : MonoBehaviour {
     //permite controlar el estado del jugador (vivo, muerto, etc)
     private string estado;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    //permite llevar la puntuacion del jugador
+    private Puntuacion puntos;
+=======
+>>>>>>> a39e30a6abd790e471fbf9fdb76aafa7165093ea
+=======
+>>>>>>> a39e30a6abd790e471fbf9fdb76aafa7165093ea
 
     private Personaje personaje;
 
@@ -230,7 +238,7 @@ public class Jugador : MonoBehaviour {
 
     }
 
-    public void recibirDañoJuador()
+    public void recibirDañoJugador()
     {
 
     }
@@ -240,6 +248,28 @@ public class Jugador : MonoBehaviour {
         if (this.salud <= 0)
         {
             this.estado = "muerto";
+            //puntos.puntuacion();
+        }
+    }
+
+    //metodo para recibir materiales de los recursos
+    public void recibirMaterial(string tipoMaterial, int cantidad)
+    {
+        switch (tipoMaterial)
+        {
+            case "piedra":
+                this.piedra = this.piedra + cantidad;
+                break;
+
+            case "madera":
+                this.madera = this.madera + cantidad;
+                break;
+
+            case "metal":
+                this.metal = this.metal + cantidad;
+                break;
+            default:
+                break;
         }
     }
 
