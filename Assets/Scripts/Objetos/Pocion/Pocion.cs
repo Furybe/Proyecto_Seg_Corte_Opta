@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Pocion : Objeto {
 
-   
-   
-	// Use this for initialization
-	void Start () {
+
+    private Habilidad habilidad;
+
+    
+
+    // Use this for initialization
+    void Start () {
 
         
 	}
@@ -17,6 +20,17 @@ public class Pocion : Objeto {
 		
 	}
 
-    
-   
+    protected Habilidad Habilidad
+    {
+        get
+        {
+            return habilidad;
+        }
+
+        set
+        {
+            habilidad = value;
+        }
+    }
+
 }
