@@ -44,8 +44,9 @@ public class Jugador : MonoBehaviour {
     private bool tocandoPared = false;
     private bool tocandoItem = false;
 
-    //rigid body
+    //propiedades implementadas como components
     private Rigidbody2D rb;
+    private Inventario inventario;
 
     //variable para controlar las animaciones del game object
     private Animator anim;
@@ -70,7 +71,7 @@ public class Jugador : MonoBehaviour {
 
         //inicializando el rigidbbody
         rb = GetComponent<Rigidbody2D>();
-
+        inventario = GetComponent<Inventario>();
         //inicializando el animator
         anim = GetComponent<Animator>();
 
@@ -96,6 +97,8 @@ public class Jugador : MonoBehaviour {
         {
             rb.velocity = rb.velocity.normalized * 100f;
         }
+
+        lanzarHabilidad();
 
         //condicion para cuando el jugardor presione la tecla "space"
         if (Input.GetKeyDown("space"))
@@ -176,9 +179,41 @@ public class Jugador : MonoBehaviour {
         rb.AddForce(movimiento * velocidadMovimiento);
 
 
-      
 
+    }
 
+    public void lanzarHabilidad()
+    {
+        //habilidad fuego rojo
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            this.inventario.consumirObjeto("pocionRoja", 1 , gameObject.transform);
+            Debug.Log("se ha presionado la tecla 1");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //se ejecuta la funcion recoger- tirar
+            Debug.Log("se ha presionado la tecla 2");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            //se ejecuta la funcion recoger- tirar
+            Debug.Log("se ha presionado la tecla 3");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            //se ejecuta la funcion recoger- tirar
+            Debug.Log("se ha presionado la tecla 4");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            //se ejecuta la funcion recoger- tirar
+            Debug.Log("se ha presionado la tecla 5");
+        }
     }
 
     public void recogerItems()

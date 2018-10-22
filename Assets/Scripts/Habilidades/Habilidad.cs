@@ -10,7 +10,7 @@ public class Habilidad : MonoBehaviour {
     private int idEjecutor;
     private int daño;
 
-    protected Rigidbody2D rb;
+    
 
     // Use this for initialization
     void Start () {

@@ -15,7 +15,7 @@ public class Inventario : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
-        Debug.Log(pocionesRojas.Count);
+
     }
 
     public void recibirObjeto(GameObject obj)
@@ -34,6 +34,22 @@ public class Inventario : MonoBehaviour {
 
             default:
 
+                break;
+        }
+    }
+
+    public void consumirObjeto(string nombreObjeto, int idJugador, Transform posicion)
+    {
+        switch (nombreObjeto)
+        {
+            case "pocionRoja":
+                if (pocionesRojas.Count>0)
+                {
+                    pocionesRojas[0].GetComponent<PocionRoja>().consumir(idJugador,transform);
+                   // pocionesRojas.RemoveAt(0);
+                }
+                break;
+            default:
                 break;
         }
     }

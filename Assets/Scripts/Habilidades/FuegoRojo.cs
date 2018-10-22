@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class FuegoRojo : Habilidad {
 
+    private Rigidbody2D rb;
+
+
 	// Use this for initialization
 	void Start () {
         this.Daño = 20;
+
         rb = GetComponent<Rigidbody2D>();
-        this.lanzar();
+        //gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -17,10 +21,15 @@ public class FuegoRojo : Habilidad {
 	}
 
 
-    public void lanzar(int idJugador)
+    public void lanzar(int idJugador, Transform transformJugador)
     {
-        this.IdEjecutor = IdEjecutor;
+        
+        gameObject.SetActive(true);
+        gameObject.transform.position = transformJugador.position;
+        this.IdEjecutor = idJugador;
+
         rb.AddForce(transform.right * 4000f);
+        Debug.Log("habilidad lanzada");
     }
 
     void OnTriggerEnter2D(Collider2D collider)

@@ -30,7 +30,7 @@ public class PocionRoja : Pocion {
             {
                 //agregamos la poción roja a su inventario
                 col.GetComponent<Inventario>().recibirObjeto(this.gameObject);
-                Destroy(this.gameObject);
+                gameObject.SetActive(false);
             }
             
            
@@ -38,9 +38,14 @@ public class PocionRoja : Pocion {
     }
 
 
-    void consumir()
+    public void consumir(int idJugador, Transform transformJugador)
     {
-        Instantiate(this.habilidad);
+
+        Instantiate(habilidad);
+        //habilidad.SetActive(true);
+
+       habilidad.GetComponent<FuegoRojo>().lanzar(idJugador,transformJugador);
+    
     }
 
 
