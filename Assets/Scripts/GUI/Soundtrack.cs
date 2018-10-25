@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambioValorVolumen : MonoBehaviour
+public class Soundtrack: MonoBehaviour
 {
 
     //  Referencia al componente Audio Source

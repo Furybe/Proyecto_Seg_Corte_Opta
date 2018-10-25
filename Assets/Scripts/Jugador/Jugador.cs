@@ -51,6 +51,12 @@ public class Jugador : MonoBehaviour {
     //variable para controlar las animaciones del game object
     private Animator anim;
 
+    //variable para controlar el sonido del game object
+    private AudioSource audioPlayer;
+
+    public AudioClip step;
+    public AudioClip agarrarObjeto;
+    
 
 
     // Use this for initialization
@@ -75,6 +81,7 @@ public class Jugador : MonoBehaviour {
         //inicializando el animator
         anim = GetComponent<Animator>();
 
+        audioPlayer = GetComponent<AudioSource>();
 
     }
 
@@ -155,6 +162,7 @@ public class Jugador : MonoBehaviour {
         {
             //se ejecuta la funcion recoger- tirar
             recogerItems();
+            
         }
 
 
@@ -162,6 +170,7 @@ public class Jugador : MonoBehaviour {
 
         //lanzando animacion correr
         anim.SetFloat("velocidad", Mathf.Abs(rb.velocity.x));
+        
 
         //lanzando animaciòn saltar
         anim.SetFloat("velocidadVertical", Mathf.Abs(rb.velocity.y));
@@ -233,6 +242,7 @@ public class Jugador : MonoBehaviour {
         {
             Vector2 salto = new Vector2(0, 35);
             rb.AddForce(salto * velocidadMovimiento);
+            
         }
 
     }
@@ -265,14 +275,14 @@ public class Jugador : MonoBehaviour {
         if (rb.velocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
-
+            
         }
 
         // cambiar dirección del sprite si se está moviendo hacia la izquierda
         if (rb.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
-
+            
         }
     }
 
@@ -282,6 +292,8 @@ public class Jugador : MonoBehaviour {
     private void OnCollisionStay2D(Collision2D collision)
     {
         this.tocandoPared = true;
+       
+        
     }
 
     //funcion para detectar cuando se sale se las collisions
@@ -295,7 +307,7 @@ public class Jugador : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "zona")
+        if (collision.gameObject.tag == "zona" )
         {
             //se ejecuta metodo para bajar la vida
             recibirDaño(0.1f);
