@@ -24,7 +24,7 @@ public class Inventario : MonoBehaviour {
         {
            
             case "pocionRoja":
-                Debug.Log("entró");
+                
                 pocionesRojas.Add(obj);
                 break;
 
@@ -50,6 +50,16 @@ public class Inventario : MonoBehaviour {
                     pocionesRojas.RemoveAt(0);
                 }
                 break;
+
+            case "pocionAzul":
+                if (pocionesAzules.Count > 0)
+                {
+                    
+                    pocionesAzules[0].GetComponent<PocionRoja>().consumir(idJugador, transform, direccion);
+                    pocionesRojas.RemoveAt(0);
+                }
+                break;
+
             default:
                 break;
         }
