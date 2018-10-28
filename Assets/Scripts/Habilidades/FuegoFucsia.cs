@@ -26,7 +26,7 @@ public class FuegoFucsia : Habilidad {
 
     public void lanzar(int idJugador, Transform transformJugador, float direccion)
     {
-
+        
 
         this.IdEjecutor = idJugador;
         if (direccion == 1)
@@ -45,15 +45,15 @@ public class FuegoFucsia : Habilidad {
             //giramos el gameObject para que la animación se vea correcta
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        Debug.Log("habilidad lanzada");
-        Destroy(gameObject, 3.0f);
+       
+        Destroy(gameObject, 1.0f);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "jugador")
         {
-            Debug.Log("entró xd jugador");
+          
             if (collider.GetComponent<Jugador>().Id == this.IdEjecutor)
             {
 

@@ -6,6 +6,7 @@ public class Inventario : MonoBehaviour {
 
     private List<GameObject> pocionesRojas = new List<GameObject>();
     private List<GameObject> pocionesAzules = new List<GameObject>();
+    private List<GameObject> pocionesFucsias = new List<GameObject>();
 
     // Use this for initialization
     void Start() {
@@ -30,6 +31,10 @@ public class Inventario : MonoBehaviour {
 
             case "pocionAzul":
                 pocionesAzules.Add(obj);
+                break;
+
+            case "pocionFucsia":
+                pocionesFucsias.Add(obj);
                 break;
 
             default:
@@ -57,6 +62,16 @@ public class Inventario : MonoBehaviour {
                     
                     pocionesAzules[0].GetComponent<PocionAzul>().consumir(idJugador, transform, direccion);
                     pocionesAzules.RemoveAt(0);
+                }
+                break;
+
+            case "pocionFucsia":
+                
+                if (pocionesFucsias.Count > 0)
+                {
+                    Debug.Log("consumida pocion fucsia");
+                    pocionesFucsias[0].GetComponent<PocionFucsia>().consumir(idJugador, transform, direccion);
+                    pocionesFucsias.RemoveAt(0);
                 }
                 break;
 

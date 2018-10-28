@@ -13,6 +13,7 @@ TagManager:
   - zona
   - pocionRoja
   - pocionAzul
+  - pocionFucsia
   layers:
   - Default
   - TransparentFX
