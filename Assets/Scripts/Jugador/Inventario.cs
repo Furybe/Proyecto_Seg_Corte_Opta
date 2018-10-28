@@ -73,6 +73,7 @@ public class Inventario : MonoBehaviour {
                     pocionesFucsias[0].GetComponent<PocionFucsia>().consumir(idJugador, transform, direccion);
                     pocionesFucsias.RemoveAt(0);
                 }
+
                 break;
 
             default:
