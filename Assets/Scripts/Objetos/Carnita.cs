@@ -35,21 +35,23 @@ public class Carnita : Objeto {
 
     public void consumir(GameObject jugador )
     {
+        Debug.Log("Inicio consumir carnita");
         gameObject.SetActive(true);
-        for (int i = 0; i < 5; i++)
-        {
-            StartCoroutine(Curar(jugador));
-        }
+        
+            Curar(jugador);
+        
+       gameObject.SetActive(false);
         Debug.Log("se ha lanzado carnita consumir");
     }
 
     //funcion para curar de 10 en 10 durante 5 seg, curando un total de 50
-    IEnumerator Curar( GameObject jugador)
+    void Curar( GameObject jugador )
     {
+   
+            jugador.GetComponent<Jugador>().Salud = jugador.GetComponent<Jugador>().Salud + 10;
+       
+     
         
-        jugador.GetComponent<Jugador>().Salud = jugador.GetComponent<Jugador>().Salud + 10;
-        yield return new WaitForSeconds(1);
-      
     }
 
 }

@@ -85,7 +85,7 @@ public class Inventario : MonoBehaviour {
 
             case "carnita":
 
-                if (pocionesFucsias.Count > 0)
+                if (comidas.Count > 0)
                 {
                    
                     comidas[0].GetComponent<Carnita>().consumir(gameObject);
