@@ -26,9 +26,14 @@ public class Cofre : MonoBehaviour {
     protected void dropearItems()
     {
 
+
         for (int i = 0; i < this.objetosDropeados.Length; i++)
         {
-            Instantiate(this.objetosDropeados[i], transform.position, Quaternion.identity);
+            if (this.objetosDropeados[i]!=null)
+            {
+                Instantiate(this.objetosDropeados[i], transform.position, Quaternion.identity);
+            }
+            
         }
         Destroy(gameObject);
     }

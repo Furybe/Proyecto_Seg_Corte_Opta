@@ -78,6 +78,7 @@ public class Jugador : MonoBehaviour {
         //inicializando el rigidbbody
         rb = GetComponent<Rigidbody2D>();
         inventario = GetComponent<Inventario>();
+
         //inicializando el animator
         anim = GetComponent<Animator>();
 
@@ -389,6 +390,10 @@ public class Jugador : MonoBehaviour {
         set
         {
             salud = value;
+            if (salud>100)
+            {
+                salud = 100;
+            }
         }
     }
 

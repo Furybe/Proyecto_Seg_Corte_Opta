@@ -22,9 +22,11 @@ GameObject:
   - component: {fileID: 212869935306571926}
   - component: {fileID: 95475003292453672}
   - component: {fileID: 61717880334208262}
+  - component: {fileID: 58090892354040730}
+  - component: {fileID: 114455478888142034}
   m_Layer: 0
   m_Name: CofreMadera
-  m_TagString: Untagged
+  m_TagString: cofre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +38,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1831199402082926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.005513, y: 6.7808, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -46.57, y: 12.68, z: 0}
+  m_LocalScale: {x: 2, y: 1.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58090892354040730
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831199402082926}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!61 &61717880334208262
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -58,7 +75,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.42, y: 3.2}
+    oldSize: {x: 3.42, y: 2.98}
     newSize: {x: 3.42, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -85,6 +102,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114455478888142034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831199402082926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c34f14773313b479b292a849a162bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDropeados:
+  - {fileID: 1959466802852448, guid: f57f83b938de5ba4e9626df5b3697778, type: 2}
+  - {fileID: 1902964901245674, guid: 17298a9757341384dae451bbf730d3f8, type: 2}
+  - {fileID: 1902964901245674, guid: 17298a9757341384dae451bbf730d3f8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212869935306571926
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -120,7 +156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9e2fd2bf1077a794e82948ae5d1d25a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc98e6cd0ca8d0347963ed9616ba7bc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
