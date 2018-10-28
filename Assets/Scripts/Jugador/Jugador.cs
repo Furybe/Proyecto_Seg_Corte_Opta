@@ -202,6 +202,7 @@ public class Jugador : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            this.inventario.consumirObjeto("pocionAzul",1, gameObject.transform, transform.localScale.x);
             //se ejecuta la funcion recoger- tirar
             Debug.Log("se ha presionado la tecla 2");
         }
