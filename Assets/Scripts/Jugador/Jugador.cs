@@ -226,6 +226,14 @@ public class Jugador : MonoBehaviour {
             //se ejecuta la funcion recoger- tirar
             Debug.Log("se ha presionado la tecla 5");
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+
+            this.inventario.consumirObjeto("carnita", 1, gameObject.transform, transform.localScale.x);
+          
+            Debug.Log("se ha presionado la tecla 6");
+        }
     }
 
     public void recogerItems()

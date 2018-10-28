@@ -7,6 +7,8 @@ public class Inventario : MonoBehaviour {
     private List<GameObject> pocionesRojas = new List<GameObject>();
     private List<GameObject> pocionesAzules = new List<GameObject>();
     private List<GameObject> pocionesFucsias = new List<GameObject>();
+    private List<GameObject> pocionesSalud = new List<GameObject>();
+    private List<GameObject> comidas = new List<GameObject>();
 
     // Use this for initialization
     void Start() {
@@ -36,6 +38,11 @@ public class Inventario : MonoBehaviour {
             case "pocionFucsia":
                 pocionesFucsias.Add(obj);
                 break;
+
+            case "carnita":
+                comidas.Add(obj);
+                break;
+
 
             default:
 
@@ -75,6 +82,18 @@ public class Inventario : MonoBehaviour {
                 }
 
                 break;
+
+            case "carnita":
+
+                if (pocionesFucsias.Count > 0)
+                {
+                   
+                    comidas[0].GetComponent<Carnita>().consumir(gameObject);
+                    comidas.RemoveAt(0);
+                }
+
+                break;
+
 
             default:
                 break;
