@@ -55,8 +55,8 @@ public class Inventario : MonoBehaviour {
                 if (pocionesAzules.Count > 0)
                 {
                     
-                    pocionesAzules[0].GetComponent<PocionRoja>().consumir(idJugador, transform, direccion);
-                    pocionesRojas.RemoveAt(0);
+                    pocionesAzules[0].GetComponent<PocionAzul>().consumir(idJugador, transform, direccion);
+                    pocionesAzules.RemoveAt(0);
                 }
                 break;
 

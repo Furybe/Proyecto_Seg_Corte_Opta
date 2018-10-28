@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class PocionAzul : Pocion {
 
-	// Use this for initialization
-	void Start () {
+    [SerializeField]
+    private GameObject habilidad;
+
+    // Use this for initialization
+    void Start()
+    {
 
         this.nombre = "Poción Azul";
-        this.descripcion = "Esta mágica poción permite obtener poderes inimaginables sobre el agua";
+        this.descripcion = "Esta mágica poción permite obtener poderes inimaginables sobre el Fuego";
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-		
-	}
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+
+    }
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -25,11 +30,23 @@ public class PocionAzul : Pocion {
             {
                 //agregamos la poción roja a su inventario
                 col.GetComponent<Inventario>().recibirObjeto(this.gameObject);
-                Destroy(this.gameObject);
+                gameObject.SetActive(false);
             }
 
 
         }
+    }
+
+
+    public void consumir(int idJugador, Transform transformJugador, float direccion)
+    {
+
+        GameObject fuegoRojo = Instantiate(habilidad);
+        //habilidad.SetActive(true);
+
+        //habilidad.GetComponent<FuegoRojo>().lanzar(idJugador,transformJugador);
+        fuegoRojo.GetComponent<FuegoAzul>().lanzar(idJugador, transformJugador, direccion);
+
     }
 }
 
