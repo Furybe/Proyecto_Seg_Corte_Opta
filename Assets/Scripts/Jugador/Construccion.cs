@@ -28,18 +28,22 @@ public class Construccion : MonoBehaviour
     private GameObject cuadroMetal;
 
     private GameObject cuadroSeleccionado;
+    private Boolean recursoSuficiente;
     // Use this for initialization
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         this.cuadroSeleccionado = cuadroMadera;
+        this.recursoSuficiente = false;
+
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        verificarRecurso();
 
-        Debug.Log(transform.localScale.x);
         //input construccion arriba
         if (Input.GetKey(KeyCode.U))
         {
@@ -119,18 +123,21 @@ public class Construccion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             cuadroSeleccionado = cuadroMadera;
+            verificarRecurso();
         }
 
         //seleccionar piedra como material de construccion
         if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             cuadroSeleccionado = cuadroPiedra;
+            verificarRecurso();
         }
 
         //seleccionar metal como material de construccion
         if (Input.GetKeyDown(KeyCode.Alpha9))
         {
             cuadroSeleccionado = cuadroMetal;
+            verificarRecurso();
         }
 
 
@@ -160,7 +167,17 @@ public class Construccion : MonoBehaviour
             posicionX = Int32.Parse(new string(xArray));
             posicionY = Int32.Parse(new string(yArray));
 
-            Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            //construimos le objeto si existen suficientes recursos
+            if (recursoSuficiente)
+            {
+                if (consumirMaterial())
+                {
+                    //creamos el bloque
+                    Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+
+                }
+
+            }
         }
     }
 
@@ -187,7 +204,16 @@ public class Construccion : MonoBehaviour
             posicionX = Int32.Parse(new string(xArray));
             posicionY = Int32.Parse(new string(yArray));
 
-            Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            if (recursoSuficiente)
+            {
+                if (consumirMaterial())
+                {
+                    Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+
+                }
+
+
+            }
         }
     }
 
@@ -212,7 +238,16 @@ public class Construccion : MonoBehaviour
         posicionX = Int32.Parse(new string(xArray));
         posicionY = Int32.Parse(new string(yArray));
 
-        Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+
+        if (recursoSuficiente)
+        {
+            if (consumirMaterial())
+            {
+                Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            }
+        
+
+        }
 
     }
 
@@ -237,8 +272,109 @@ public class Construccion : MonoBehaviour
         posicionX = Int32.Parse(new string(xArray));
         posicionY = Int32.Parse(new string(yArray));
 
-        Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+        if (recursoSuficiente)
+        {
+            if (consumirMaterial())
+            {
+                Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
 
+            }
+
+        }
+
+    }
+
+    void verificarRecurso()
+    {
+        switch (cuadroSeleccionado.tag)
+        {
+            case "bloqueMadera":
+                if (gameObject.GetComponent<Jugador>().Madera >= 10)
+                {
+                    recursoSuficiente = true;
+                }
+                else
+                {
+                    recursoSuficiente = false;
+                }
+                break;
+
+            case "bloquePiedra":
+                if (gameObject.GetComponent<Jugador>().Piedra >= 10)
+                {
+                    recursoSuficiente = true;
+                }
+                else
+                {
+                    recursoSuficiente = false;
+                }
+                break;
+
+            case "bloqueMetal":
+                if (gameObject.GetComponent<Jugador>().Metal >= 10)
+                {
+                    recursoSuficiente = true;
+                }
+                else
+                {
+                    recursoSuficiente = false;
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    //gastar material al construir bloque
+    private bool consumirMaterial()
+    {
+        if (cuadroSeleccionado.tag == "bloqueMadera")
+        {
+
+            if (gameObject.GetComponent<Jugador>().Madera >= 10)
+            {
+                gameObject.GetComponent<Jugador>().Madera = gameObject.GetComponent<Jugador>().Madera - 10;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        if (cuadroSeleccionado.tag == "bloquePiedra")
+        {
+
+            if (gameObject.GetComponent<Jugador>().Piedra >= 10)
+            {
+                gameObject.GetComponent<Jugador>().Piedra = gameObject.GetComponent<Jugador>().Piedra - 10;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        if (cuadroSeleccionado.tag == "bloqueMetal")
+        {
+            if (gameObject.GetComponent<Jugador>().Metal >= 10)
+            {
+                gameObject.GetComponent<Jugador>().Metal = gameObject.GetComponent<Jugador>().Metal - 10;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+        return false;
     }
 
 }

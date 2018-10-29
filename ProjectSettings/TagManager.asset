@@ -16,6 +16,9 @@ TagManager:
   - pocionFucsia
   - PocionFucsia
   - carnita
+  - bloqueMetal
+  - bloquePiedra
+  - bloqueMadera
   layers:
   - Default
   - TransparentFX

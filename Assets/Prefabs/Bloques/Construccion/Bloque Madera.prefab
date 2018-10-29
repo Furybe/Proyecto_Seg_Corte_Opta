@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61137679939750764}
   m_Layer: 0
   m_Name: Bloque Madera
-  m_TagString: Untagged
+  m_TagString: bloqueMadera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
