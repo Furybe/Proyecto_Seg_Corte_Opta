@@ -26,12 +26,13 @@ public class Construccion : MonoBehaviour
 
     [SerializeField]
     private GameObject cuadroMetal;
-    
+
+    private GameObject cuadroSeleccionado;
     // Use this for initialization
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
-
+        this.cuadroSeleccionado = cuadroMadera;
     }
 
     // Update is called once per frame
@@ -112,9 +113,26 @@ public class Construccion : MonoBehaviour
             }
         }
 
-        //input construccion abajo
 
-        //Debug.Log(herramientaArriba.transform.position.x + "    "+ herramientaArriba.transform.position.y);
+        //inputs para cambiar el material de construcción
+        //seleccionar madera como material de construccion
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            cuadroSeleccionado = cuadroMadera;
+        }
+
+        //seleccionar piedra como material de construccion
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            cuadroSeleccionado = cuadroPiedra;
+        }
+
+        //seleccionar metal como material de construccion
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            cuadroSeleccionado = cuadroMetal;
+        }
+
 
     }
 
@@ -142,7 +160,7 @@ public class Construccion : MonoBehaviour
             posicionX = Int32.Parse(new string(xArray));
             posicionY = Int32.Parse(new string(yArray));
 
-            Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
         }
     }
 
@@ -169,7 +187,7 @@ public class Construccion : MonoBehaviour
             posicionX = Int32.Parse(new string(xArray));
             posicionY = Int32.Parse(new string(yArray));
 
-            Instantiate(cuadroMetal, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
         }
     }
 
@@ -194,7 +212,7 @@ public class Construccion : MonoBehaviour
         posicionX = Int32.Parse(new string(xArray));
         posicionY = Int32.Parse(new string(yArray));
 
-        Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+        Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
 
     }
 
@@ -219,7 +237,7 @@ public class Construccion : MonoBehaviour
         posicionX = Int32.Parse(new string(xArray));
         posicionY = Int32.Parse(new string(yArray));
 
-        Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+        Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
 
     }
 

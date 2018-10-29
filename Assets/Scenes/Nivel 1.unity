@@ -242,48 +242,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 25305835}
   m_CullTransparentMesh: 0
---- !u!1 &51672532 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1125817767568502, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1559062938}
---- !u!61 &51672535
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 51672532}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.5666666, y: 7.5666666}
-    newSize: {x: 7.5666666, y: 7.5666666}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 9}
-  m_EdgeRadius: 0
---- !u!114 &51672536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 51672532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea2e041a09a40624ba8c2d81211b09b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  construible: 0
 --- !u!1 &64528135 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1105043465795914, guid: 454cd6b8afbeb3b40b754c3f103c3253,
@@ -316,48 +274,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.5
---- !u!1 &67582074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1398287615285476, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1559062938}
---- !u!114 &67582077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 67582074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979006d6f18804247ab752fb2ec01a3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  construible: 0
---- !u!61 &67582078
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 67582074}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.5666666, y: 7.5666666}
-    newSize: {x: 7.5666666, y: 7.5666666}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 9}
-  m_EdgeRadius: 0
 --- !u!1 &91733196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,23 +2342,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca6d9c5e24d6e3f4192bdc772d42bd57, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1086207072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1603259260389472, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1559062938}
---- !u!114 &1086207075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1086207072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9863e6b026495e346ae11a3bbf32dba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  construible: 0
 --- !u!1 &1162229344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,42 +3329,6 @@ Prefab:
       propertyPath: textoMetal
       value: 
       objectReference: {fileID: 515004454}
-    - target: {fileID: 212261748669486888, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212245222194297474, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212288851320138898, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212435470900395394, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212435470900395394, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212288851320138898, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114453776286707314, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-        type: 2}
-      propertyPath: cuadroPiedra
-      value: 
-      objectReference: {fileID: 1700233179786688, guid: eaa04cb7f43d3104987728f0a37c91cb,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad15ffc2d31b4424fb1a3324624d42cc, type: 2}
   m_IsPrefabAsset: 0
@@ -3951,23 +3814,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: {fileID: 467933507}
---- !u!1 &1994780787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1083920148654916, guid: ad15ffc2d31b4424fb1a3324624d42cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1559062938}
---- !u!114 &1994780790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1994780787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f305bd326f0f948b7bcf26ad169704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  construible: 0
 --- !u!1 &2054958765
 GameObject:
   m_ObjectHideFlags: 0
