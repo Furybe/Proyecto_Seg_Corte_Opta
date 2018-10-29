@@ -92,6 +92,12 @@ public class Jugador : NetworkBehaviour {
 
     void FixedUpdate()
     {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
+
         //actualizar texto materiales
         actualizarTextoMateriales();
 
