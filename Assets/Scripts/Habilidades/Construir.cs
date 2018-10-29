@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Construir : MonoBehaviour {
 
-    protected bool construible ;
+    public bool construible ;
 	// Use this for initialization
 	void Start () {
 		

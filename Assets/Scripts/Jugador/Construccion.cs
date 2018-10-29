@@ -71,6 +71,7 @@ public class Construccion : MonoBehaviour {
         //input construccion derecha
         if (Input.GetKey(KeyCode.K))
         {
+            
             construirDerecha();
         }
 
@@ -87,7 +88,10 @@ public class Construccion : MonoBehaviour {
 
     void construirArriba()
     {
-        Debug.Log("entró construccion");
+        if (herramientaArriba.GetComponent<ConstruirArriba>().construible )
+        {
+
+       
         //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
         //la construcción
         int posicionX = (int)herramientaArriba.transform.position.x;
@@ -107,13 +111,14 @@ public class Construccion : MonoBehaviour {
         posicionY = Int32.Parse(new string(yArray));
 
         Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0),Quaternion.identity);
-
+        }
     }
 
 
     void construirAbajo()
     {
-       
+        if (herramientaAbajo.GetComponent<ConstruirAbajo>().construible)
+        {
         //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
         //la construcción
         int posicionX = (int)herramientaAbajo.transform.position.x;
@@ -133,7 +138,7 @@ public class Construccion : MonoBehaviour {
         posicionY = Int32.Parse(new string(yArray));
 
         Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
-
+        }
     }
 
     void construirDerecha()
