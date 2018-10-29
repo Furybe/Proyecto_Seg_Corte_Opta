@@ -1320,6 +1320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   herramientaArriba: {fileID: 1398287615285476}
+  herramientaAbajo: {fileID: 1125817767568502}
+  herramientaDerecha: {fileID: 1083920148654916}
+  herramientaIzquierda: {fileID: 1603259260389472}
   cuadroMadera: {fileID: 1083723244140622, guid: 4b579a17f6a19314f8a340b522680991,
     type: 2}
 --- !u!114 &114568770996022336

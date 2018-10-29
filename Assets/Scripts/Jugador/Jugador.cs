@@ -117,7 +117,7 @@ public class Jugador : MonoBehaviour {
         }
 
         //condicional para iniciar estado farmear
-        if (Input.GetKeyUp(KeyCode.L))
+        if (Input.GetKeyUp(KeyCode.G))
         {
             //se ejecuta la funcion recoger- tirar
             pararFarmear();
@@ -125,14 +125,14 @@ public class Jugador : MonoBehaviour {
 
 
         //condicional para salir del estado de farmeo
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             //se ejecuta la funcion recoger- tirar
             pararFarmear();
         } 
 
         //condicional para iniciar estado farmear
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.G))
         {
             //se ejecuta la funcion recoger- tirar
             farmear();
@@ -142,7 +142,7 @@ public class Jugador : MonoBehaviour {
 
 
         //condicional para salir del estado de recoger
-        if (Input.GetKeyUp(KeyCode.J))
+        if (Input.GetKeyUp(KeyCode.L))
         {
             //se ejecuta la funcion recoger- tirar
             pararRecogerItems();
@@ -151,7 +151,7 @@ public class Jugador : MonoBehaviour {
 
 
         //condicional para iniciar estado recoger
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             //se ejecuta la funcion recoger- tirar
             pararRecogerItems();
@@ -159,7 +159,7 @@ public class Jugador : MonoBehaviour {
 
 
         //condicional para iniciar estado recoger
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.L))
         {
             //se ejecuta la funcion recoger- tirar
             recogerItems();
@@ -226,7 +226,7 @@ public class Jugador : MonoBehaviour {
             //se ejecuta la funcion recoger- tirar
             Debug.Log("se ha presionado la tecla 5");
         }
-
+ 
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
 
