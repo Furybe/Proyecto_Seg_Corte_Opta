@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 82491184828882518}
   - component: {fileID: 114568770996022336}
   - component: {fileID: 114453776286707314}
+  - component: {fileID: 114995300120917996}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: jugador
@@ -1460,6 +1461,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   construible: 0
+--- !u!114 &114995300120917996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654857414913834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 173
+    i1: 21
+    i2: 255
+    i3: 194
+    i4: 211
+    i5: 27
+    i6: 68
+    i7: 36
+    i8: 251
+    i9: 26
+    i10: 51
+    i11: 36
+    i12: 98
+    i13: 77
+    i14: 66
+    i15: 204
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
 --- !u!212 &212049825223954138
 SpriteRenderer:
   m_ObjectHideFlags: 1

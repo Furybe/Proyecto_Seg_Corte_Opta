@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class Jugador : MonoBehaviour {
+public class Jugador : NetworkBehaviour {
 
 
     //atributos - propiedades

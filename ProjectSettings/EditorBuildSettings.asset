@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Lobby.unity
     guid: 029a3e54ad244eb47ba22128d56d3c18
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel 1.unity
     guid: a0839b789d5e23349881fec245a27a4c
   - enabled: 0
@@ -47,7 +47,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PruebasPuntaje.unity
     guid: 5a1a5462c32babb4b89d3094ccd05fc6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Multijugador.unity
     guid: 5b249021b0776fd4592651b30082a722
+  - enabled: 1
+    path: Assets/Scenes/Nivel 1 Multiplayer.unity
+    guid: 06ad2913d475cdb4ba5d492925dfd6a0
   m_configObjects: {}
