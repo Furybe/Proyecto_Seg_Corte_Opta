@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Construccion : MonoBehaviour {
+public class Construccion : MonoBehaviour
+{
 
     private SpriteRenderer sprite;
 
@@ -19,32 +20,35 @@ public class Construccion : MonoBehaviour {
 
     [SerializeField]
     private GameObject cuadroMadera;
-/*
+
     [SerializeField]
     private GameObject cuadroPiedra;
 
     [SerializeField]
     private GameObject cuadroMetal;
-    */
+    
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         sprite = gameObject.GetComponent<SpriteRenderer>();
-       
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        
+
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+
+        Debug.Log(transform.localScale.x);
         //input construccion arriba
-      if (Input.GetKey(KeyCode.U))
-      {
-          construirArriba();
-      }
-      
+        if (Input.GetKey(KeyCode.U))
+        {
+            construirArriba();
+        }
+
         if (Input.GetKeyDown(KeyCode.U))
-      {
-          construirArriba();
-      }
+        {
+            construirArriba();
+        }
 
         //input construccion abajo
         if (Input.GetKey(KeyCode.J))
@@ -60,24 +64,52 @@ public class Construccion : MonoBehaviour {
         //input construccion izquierda
         if (Input.GetKey(KeyCode.H))
         {
-            construirIzquierda();
+            if (transform.localScale.x == -1)
+            {
+                construirDerecha();
+            }
+            else
+            {
+                construirIzquierda();
+            }
+
         }
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            construirIzquierda();
+            if (transform.localScale.x == -1)
+            {
+                construirDerecha();
+            }
+            else
+            {
+                construirIzquierda();
+            }
         }
 
         //input construccion derecha
         if (Input.GetKey(KeyCode.K))
         {
-            
-            construirDerecha();
+            if (transform.localScale.x == -1)
+            {
+                construirIzquierda();
+            }
+            else
+            {
+                construirDerecha();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            construirDerecha();
+            if (transform.localScale.x == -1)
+            {
+                construirIzquierda();
+            }
+            else
+            {
+                construirDerecha();
+            }
         }
 
         //input construccion abajo
@@ -88,29 +120,29 @@ public class Construccion : MonoBehaviour {
 
     void construirArriba()
     {
-        if (herramientaArriba.GetComponent<ConstruirArriba>().construible )
+        if (herramientaArriba.GetComponent<ConstruirArriba>().construible)
         {
 
-       
-        //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
-        //la construcción
-        int posicionX = (int)herramientaArriba.transform.position.x;
-        int posicionY = (int)herramientaArriba.transform.position.y;
 
-        //covertimos a arreglos de char para facilitar el trabajo
-        char[] xArray = posicionX.ToString().ToCharArray();
-        char[] yArray = posicionY.ToString().ToCharArray();
+            //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
+            //la construcción
+            int posicionX = (int)herramientaArriba.transform.position.x;
+            int posicionY = (int)herramientaArriba.transform.position.y;
 
-        //cambiamos el último dígito por 5 (para centrar en la cuadrícula)
-        xArray[xArray.Length - 1] = '5';
-        yArray[yArray.Length - 1] = '5';
+            //covertimos a arreglos de char para facilitar el trabajo
+            char[] xArray = posicionX.ToString().ToCharArray();
+            char[] yArray = posicionY.ToString().ToCharArray();
 
-      
-        //obtenemos el nuevo número 
-        posicionX = Int32.Parse(new string(xArray));
-        posicionY = Int32.Parse(new string(yArray));
+            //cambiamos el último dígito por 5 (para centrar en la cuadrícula)
+            xArray[xArray.Length - 1] = '5';
+            yArray[yArray.Length - 1] = '5';
 
-        Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0),Quaternion.identity);
+
+            //obtenemos el nuevo número 
+            posicionX = Int32.Parse(new string(xArray));
+            posicionY = Int32.Parse(new string(yArray));
+
+            Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
         }
     }
 
@@ -119,25 +151,25 @@ public class Construccion : MonoBehaviour {
     {
         if (herramientaAbajo.GetComponent<ConstruirAbajo>().construible)
         {
-        //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
-        //la construcción
-        int posicionX = (int)herramientaAbajo.transform.position.x;
-        int posicionY = (int)herramientaAbajo.transform.position.y;
+            //obtenemos las posiciones de la herramienta arriba para decidir donde poner 
+            //la construcción
+            int posicionX = (int)herramientaAbajo.transform.position.x;
+            int posicionY = (int)herramientaAbajo.transform.position.y;
 
-        //covertimos a arreglos de char para facilitar el trabajo
-        char[] xArray = posicionX.ToString().ToCharArray();
-        char[] yArray = posicionY.ToString().ToCharArray();
+            //covertimos a arreglos de char para facilitar el trabajo
+            char[] xArray = posicionX.ToString().ToCharArray();
+            char[] yArray = posicionY.ToString().ToCharArray();
 
-        //cambiamos el último dígito por 5 (para centrar en la cuadrícula)
-        xArray[xArray.Length - 1] = '5';
-        yArray[yArray.Length - 1] = '5';
+            //cambiamos el último dígito por 5 (para centrar en la cuadrícula)
+            xArray[xArray.Length - 1] = '5';
+            yArray[yArray.Length - 1] = '5';
 
 
-        //obtenemos el nuevo número 
-        posicionX = Int32.Parse(new string(xArray));
-        posicionY = Int32.Parse(new string(yArray));
+            //obtenemos el nuevo número 
+            posicionX = Int32.Parse(new string(xArray));
+            posicionY = Int32.Parse(new string(yArray));
 
-        Instantiate(cuadroMadera, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+            Instantiate(cuadroMetal, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
         }
     }
 

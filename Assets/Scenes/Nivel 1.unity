@@ -2426,6 +2426,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca6d9c5e24d6e3f4192bdc772d42bd57, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1086207072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603259260389472, guid: ad15ffc2d31b4424fb1a3324624d42cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1559062938}
+--- !u!114 &1086207075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1086207072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9863e6b026495e346ae11a3bbf32dba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  construible: 0
 --- !u!1 &1162229344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,6 +3460,12 @@ Prefab:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114453776286707314, guid: ad15ffc2d31b4424fb1a3324624d42cc,
+        type: 2}
+      propertyPath: cuadroPiedra
+      value: 
+      objectReference: {fileID: 1700233179786688, guid: eaa04cb7f43d3104987728f0a37c91cb,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad15ffc2d31b4424fb1a3324624d42cc, type: 2}
   m_IsPrefabAsset: 0
@@ -3928,6 +3951,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: {fileID: 467933507}
+--- !u!1 &1994780787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1083920148654916, guid: ad15ffc2d31b4424fb1a3324624d42cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1559062938}
+--- !u!114 &1994780790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994780787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f305bd326f0f948b7bcf26ad169704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  construible: 0
 --- !u!1 &2054958765
 GameObject:
   m_ObjectHideFlags: 0
