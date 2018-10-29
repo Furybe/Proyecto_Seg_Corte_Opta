@@ -43,28 +43,30 @@ public class Construccion : MonoBehaviour
     void FixedUpdate()
     {
         verificarRecurso();
+        buscarBloqueMaterialSuficiente();
 
         //input construccion arriba
         if (Input.GetKey(KeyCode.U))
         {
             construirArriba();
         }
-
+/*
         if (Input.GetKeyDown(KeyCode.U))
         {
             construirArriba();
         }
-
+*/
         //input construccion abajo
         if (Input.GetKey(KeyCode.J))
         {
             construirAbajo();
         }
-
+/*
         if (Input.GetKeyDown(KeyCode.J))
         {
             construirAbajo();
         }
+        */
 
         //input construccion izquierda
         if (Input.GetKey(KeyCode.H))
@@ -79,7 +81,8 @@ public class Construccion : MonoBehaviour
             }
 
         }
-
+    
+        /*
         if (Input.GetKeyDown(KeyCode.H))
         {
             if (transform.localScale.x == -1)
@@ -91,7 +94,7 @@ public class Construccion : MonoBehaviour
                 construirIzquierda();
             }
         }
-
+*/
         //input construccion derecha
         if (Input.GetKey(KeyCode.K))
         {
@@ -105,6 +108,7 @@ public class Construccion : MonoBehaviour
             }
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.K))
         {
             if (transform.localScale.x == -1)
@@ -116,7 +120,7 @@ public class Construccion : MonoBehaviour
                 construirDerecha();
             }
         }
-
+        */
 
         //inputs para cambiar el material de construcción
         //seleccionar madera como material de construccion
@@ -375,6 +379,32 @@ public class Construccion : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void buscarBloqueMaterialSuficiente()
+    {
+        if (recursoSuficiente==false)
+        {
+            if (gameObject.GetComponent<Jugador>().Madera>10)
+            {
+                cuadroSeleccionado = cuadroMadera;
+                verificarRecurso();
+                return;
+            }
+
+            if (gameObject.GetComponent<Jugador>().Piedra > 10)
+            {
+                cuadroSeleccionado = cuadroPiedra;
+                verificarRecurso();
+                return;
+            }
+            if (gameObject.GetComponent<Jugador>().Metal > 10)
+            {
+                cuadroSeleccionado = cuadroMetal;
+                verificarRecurso();
+                return;
+            }
+        }
     }
 
 }
