@@ -19,6 +19,7 @@ TagManager:
   - bloqueMetal
   - bloquePiedra
   - bloqueMadera
+  - camara
   layers:
   - Default
   - TransparentFX
