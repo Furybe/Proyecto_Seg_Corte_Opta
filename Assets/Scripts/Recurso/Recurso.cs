@@ -44,16 +44,21 @@ public class Recurso : NetworkBehaviour
         return 0;
     }
 
-    [Command]
+    
     protected void comprobarDestruirRecurso()
     {
         if (this.cantidadMaterial <= 0)
         {
 
             //this.DestruirRecurso();
-            
-            NetworkServer.Destroy(this.gameObject);
+
+            CmdDestroy();
         }
     }
 
+    [Command]
+    void CmdDestroy()
+    {
+        NetworkBehaviour.Destroy(this.gameObject);
+    }
 }
