@@ -10,7 +10,7 @@ public class Puntuacion : MonoBehaviour {
 
 	public Text puntaje;
 
-	Jugador jugador = new Jugador();
+	public Jugador jugador;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +19,13 @@ public class Puntuacion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (jugador.Salud < 100)
+		FindObjectOfType<Jugador>() /*.metodomuerte()*/;
+		
+		if (jugador.Salud == 100)
 		{
 			//Debug.Log("EL jugador esta perdiendo vida");
 			puntuacion();
+			puntaje.text = jugador.Salud.ToString("0");
 		}
 		
 	}
