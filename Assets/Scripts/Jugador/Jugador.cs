@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class Jugador : NetworkBehaviour {
 
-   //[SerializeField]
-  //  private Camera camara;
-
+    [SerializeField]
+    GameObject camara;
     //atributos - propiedades
 
     //atributo identificador de jugador
@@ -94,18 +93,26 @@ public class Jugador : NetworkBehaviour {
     // Update is called once per frame
 
 
+
+    public override void OnStartLocalPlayer()
+    {
+        Camera.main.GetComponent<CamaraMultiplayer>().setTarget(gameObject.transform);
+    }
+
+
     void FixedUpdate()
     {
         
         if (!isLocalPlayer)
         {
-            
+          
             return;
         }
 
         if (isLocalPlayer)
         {
-          
+            
+           
         }
 
         //actualizar texto materiales

@@ -982,7 +982,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1654857414913834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -17.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2093,7 +2093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b896e23a06b3bfb40afa860ec0810596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camara: {fileID: 20614584737413694, guid: 04edc134e4be8d443955ffc6d9eed708, type: 2}
+  camara: {fileID: 0}
   textoMadera: {fileID: 114412948294909212}
   textoPiedra: {fileID: 114403680710397262}
   textoMetal: {fileID: 114991818315943450}
