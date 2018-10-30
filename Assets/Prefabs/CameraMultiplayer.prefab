@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4872156769544846}
   - component: {fileID: 20614584737413694}
   - component: {fileID: 81197800577161332}
-  - component: {fileID: 114306879798689014}
+  - component: {fileID: 114681368981647436}
   m_Layer: 0
   m_Name: CameraMultiplayer
   m_TagString: MainCamera
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156038145670650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,7 +89,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156038145670650}
   m_Enabled: 1
---- !u!114 &114306879798689014
+--- !u!114 &114681368981647436
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,4 +101,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  depth: -30
+  depth: -20

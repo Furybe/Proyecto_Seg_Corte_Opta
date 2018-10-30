@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamaraMultiplayer : MonoBehaviour {
 
     public Transform playerTransform;
-    public int depth = -30;
+    public int depth = -20;
 
     // Update is called once per frame
     void Update()
