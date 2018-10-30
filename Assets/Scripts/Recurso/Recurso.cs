@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Recurso : MonoBehaviour {
+public class Recurso : NetworkBehaviour
+{
 
     protected string nombreMaterial;
     protected int cantidadMaterial;
@@ -42,11 +44,15 @@ public class Recurso : MonoBehaviour {
         return 0;
     }
 
-   protected void comprobarDestruirRecurso()
+    [Command]
+    protected void comprobarDestruirRecurso()
     {
         if (this.cantidadMaterial <= 0)
         {
-            this.DestruirRecurso();
+
+            //this.DestruirRecurso();
+            
+            NetworkServer.Destroy(this.gameObject);
         }
     }
 

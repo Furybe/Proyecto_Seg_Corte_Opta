@@ -14,14 +14,14 @@ public class Puntuacion : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		/*
 		if (jugador.Salud == 100f)
 		{
 			Debug.Log("El jugador esta perdiendo vida");
 			puntuacion();
 			puntaje.text = jugador.Salud.ToString("0");
 		}
-		
+		*/
 	}
 	// funcion que se encarga de sumar los puntos obtenidos en la partida.
 	// 1000 puntos por ganar, 100 puntos por matar a otro jugador.

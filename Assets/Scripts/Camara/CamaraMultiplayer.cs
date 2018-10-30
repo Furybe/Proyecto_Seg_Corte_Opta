@@ -12,7 +12,7 @@ public class CamaraMultiplayer : MonoBehaviour {
     {
         if (playerTransform != null)
         {
-            transform.position = playerTransform.position + new Vector3(0, 10, depth);
+            transform.position = playerTransform.position + new Vector3(0, 15, depth);
         }
     }
     public void setTarget(Transform target)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Roca : Recurso {
 
@@ -9,7 +10,7 @@ public class Roca : Recurso {
 
     // Use this for initialization
     void Start () {
-
+      
         this.nombreMaterial = "piedra";
         this.cantidadMaterial = 200;
 
