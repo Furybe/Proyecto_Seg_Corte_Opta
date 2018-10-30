@@ -10,20 +10,14 @@ public class Puntuacion : MonoBehaviour {
 
 	public Text puntaje;
 
-	public Jugador jugador;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public Jugador jugador = new Jugador();
 	
 	// Update is called once per frame
 	void Update () {
-		FindObjectOfType<Jugador>() /*.metodomuerte()*/;
 		
-		if (jugador.Salud == 100)
+		if (jugador.Salud == 100f)
 		{
-			//Debug.Log("EL jugador esta perdiendo vida");
+			Debug.Log("El jugador esta perdiendo vida");
 			puntuacion();
 			puntaje.text = jugador.Salud.ToString("0");
 		}
@@ -32,9 +26,9 @@ public class Puntuacion : MonoBehaviour {
 	// funcion que se encarga de sumar los puntos obtenidos en la partida.
 	// 1000 puntos por ganar, 100 puntos por matar a otro jugador.
 	private void puntuacion(){
-		if (jugador.Estado == "muerto")
+		if (jugador.Estado == "vivo")
 		{
-			Debug.Log("El jugador " + jugador.tag + " Ha muerto por ");
+			Debug.Log("El jugador " + jugador.Id + " ha ganado 100 puntos");
 		}
 
 	}
