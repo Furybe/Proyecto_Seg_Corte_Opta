@@ -76,6 +76,28 @@ public class Backend : MonoBehaviour {
         }
     }
 
+    IEnumerator registroPost(string usuario, string contraseña, string correo, string nombre)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("usuario", usuario);
+        form.AddField("contrasena", contraseña);
+
+
+        UnityWebRequest www = UnityWebRequest.Post("http://localhost:8000/api/login", form);
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Debug.Log("Form upload complete!");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Inicio");
+
+        }
+    }
+
     void ingresar()
     {
         Debug.Log("xd");
