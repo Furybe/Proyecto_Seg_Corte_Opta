@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Jugador : NetworkBehaviour {
 
+   //[SerializeField]
+  //  private Camera camara;
 
     //atributos - propiedades
 
@@ -63,6 +65,8 @@ public class Jugador : NetworkBehaviour {
     // Use this for initialization
     void Start()
     {
+        
+
         //inicializando propiedades 
         this.estado = "vivo";
         this.salud = 100;
@@ -92,11 +96,17 @@ public class Jugador : NetworkBehaviour {
 
     void FixedUpdate()
     {
+        
         if (!isLocalPlayer)
         {
+            
             return;
         }
 
+        if (isLocalPlayer)
+        {
+          
+        }
 
         //actualizar texto materiales
         actualizarTextoMateriales();
