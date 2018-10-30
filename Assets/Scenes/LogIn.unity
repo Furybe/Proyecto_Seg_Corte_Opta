@@ -113,6 +113,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &47886477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114288682291352456, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &55940095
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +674,7 @@ Prefab:
     - target: {fileID: 224794109651381918, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.59802246
+      value: 0.59765625
       objectReference: {fileID: 0}
     - target: {fileID: 224794109651381918, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
@@ -713,7 +719,7 @@ Prefab:
     - target: {fileID: 224757830180291530, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 96.3
+      value: 96.30078
       objectReference: {fileID: 0}
     - target: {fileID: 224313233284017786, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
@@ -813,7 +819,7 @@ Prefab:
     - target: {fileID: 224527250670959132, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 19.149902
+      value: 19.15039
       objectReference: {fileID: 0}
     - target: {fileID: 224527250670959132, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
@@ -827,12 +833,12 @@ Prefab:
     - target: {fileID: 224597725492970220, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: -110.64546
+      value: -107.770584
       objectReference: {fileID: 0}
     - target: {fileID: 224696851869983180, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.5000076
+      value: -0.000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 224480799108767382, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
         type: 2}
@@ -1524,6 +1530,16 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224696851869983180, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -0.000045776
+      objectReference: {fileID: 0}
+    - target: {fileID: 224235037529081964, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -43.04785
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c40da2a2c9c7c53468cd7667af5c7f9f, type: 2}
   m_IsPrefabAsset: 0
@@ -1866,6 +1882,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686797260}
   m_CullTransparentMesh: 0
+--- !u!114 &688740887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114846147119161572, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &845594966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2409,24 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1368272590}
   m_CullTransparentMesh: 0
+--- !u!114 &1386527421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114088433874009230, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1477161487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114969919533961316, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &1480350425 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114071952322448798, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1626697487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2770,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1766997161}
   m_CullTransparentMesh: 0
+--- !u!114 &1806991269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114321035750934294, guid: c40da2a2c9c7c53468cd7667af5c7f9f,
+    type: 2}
+  m_PrefabInternal: {fileID: 460950079}
+  m_Script: {fileID: 575553740, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1890931249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,7 +3124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputUsuario: {fileID: 137827934}
   "inputContrase\xF1a": {fileID: 1923689165}
+  inputUsuarioRegistro: {fileID: 1386527421}
+  "inputContrase\xF1aRegistro": {fileID: 1477161487}
+  "inputContrase\xF1aRegistroConfirm": {fileID: 47886477}
+  inputNombreRegistro: {fileID: 1386527421}
+  inputCorreoRegistro: {fileID: 688740887}
+  inputCorreoRegistroConfirm: {fileID: 1806991269}
   boton: {fileID: 513794926}
+  botonR: {fileID: 1480350425}
 --- !u!1 &2118082571
 GameObject:
   m_ObjectHideFlags: 0
