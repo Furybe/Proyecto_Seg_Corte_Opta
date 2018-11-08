@@ -1737,6 +1737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntaje: {fileID: 114648270669041200}
+  jugador: {fileID: 114828574568855860}
+  scoreboard: {fileID: 1558203399366028, guid: 77147333dca32e647b9f4481c493e054, type: 2}
 --- !u!114 &114274960881895826
 MonoBehaviour:
   m_ObjectHideFlags: 1
