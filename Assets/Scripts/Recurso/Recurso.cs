@@ -26,6 +26,7 @@ public class Recurso : NetworkBehaviour
     public void DestruirRecurso()
     {
         Destroy(this.gameObject);
+
     }
 
 
@@ -51,14 +52,28 @@ public class Recurso : NetworkBehaviour
         {
 
             //this.DestruirRecurso();
+            CmdDestroyGameObject(gameObject);
+            CmdDestroyGameObject(gameObject);
 
-            CmdDestroy();
+
+            //NetworkBehaviour.Destroy(gameObject);
+            //Destroy(gameObject);
+
         }
     }
 
+
     [Command]
-    void CmdDestroy()
+    void CmdDestroyGameObject(GameObject obj)
     {
-        NetworkBehaviour.Destroy(this.gameObject);
+        Destroy(gameObject);
+        NetworkServer.Destroy(obj);
+    }
+
+    [ClientRpc]
+    void RpcDestroyGameObject(GameObject obj)
+    {
+        Destroy(gameObject);
+        NetworkServer.Destroy(obj);
     }
 }
