@@ -21,6 +21,9 @@ GameObject:
   - component: {fileID: 4772990479564330}
   - component: {fileID: 212422842341246556}
   - component: {fileID: 61137679939750764}
+  - component: {fileID: 114462106559007172}
+  - component: {fileID: 114845182848785260}
+  - component: {fileID: 114582332343964046}
   m_Layer: 0
   m_Name: Bloque Madera
   m_TagString: bloqueMadera
@@ -66,6 +69,70 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &114462106559007172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083723244140622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 75
+    i1: 87
+    i2: 154
+    i3: 23
+    i4: 246
+    i5: 161
+    i6: 147
+    i7: 20
+    i8: 248
+    i9: 163
+    i10: 64
+    i11: 181
+    i12: 34
+    i13: 104
+    i14: 9
+    i15: 145
+  m_ServerOnly: 1
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114582332343964046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083723244140622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114845182848785260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083723244140622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf0899bc7c1d4545b5dace4cb77891e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212422842341246556
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -53,6 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roca: {fileID: 1105043465795914, guid: 454cd6b8afbeb3b40b754c3f103c3253, type: 2}
+  cuadroMadera: {fileID: 0}
+  cuadroPiedra: {fileID: 0}
+  cuadroMetal: {fileID: 0}
 --- !u!114 &114264673296241394
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -214,7 +214,10 @@ MonoBehaviour:
   m_OfflineScene: Multijugador
   m_OnlineScene: Nivel 1 Multiplayer
   m_SpawnPrefabs:
-  - {fileID: 0}
+  - {fileID: 1105043465795914, guid: 454cd6b8afbeb3b40b754c3f103c3253, type: 2}
+  - {fileID: 1083723244140622, guid: 4b579a17f6a19314f8a340b522680991, type: 2}
+  - {fileID: 1700233179786688, guid: eaa04cb7f43d3104987728f0a37c91cb, type: 2}
+  - {fileID: 1899338314737404, guid: e0c3fe7b6dfa914498ab61163c72908c, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
   m_ConnectionConfig:

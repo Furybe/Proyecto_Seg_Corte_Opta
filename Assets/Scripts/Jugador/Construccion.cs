@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Construccion : MonoBehaviour
+public class Construccion : NetworkBehaviour
 {
+    [SerializeField]
+    private GameObject generador;
 
     private SpriteRenderer sprite;
 
@@ -177,8 +180,9 @@ public class Construccion : MonoBehaviour
                 if (consumirMaterial())
                 {
                     //creamos el bloque
-                    Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
-
+                    //GameObject instancia = Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+                    //NetworkServer.Spawn(instancia);
+                    CmdConstruirServidor(cuadroSeleccionado, posicionX, posicionY);
                 }
 
             }
@@ -212,8 +216,9 @@ public class Construccion : MonoBehaviour
             {
                 if (consumirMaterial())
                 {
-                    Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
-
+                    //GameObject instancia = Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+                    // generador.GetComponent<GeneradorRecursos>().CmdConstruirBloque(cuadroSeleccionado,posicionX,posicionY);
+                    CmdConstruirServidor(cuadroSeleccionado, posicionX, posicionY);
                 }
 
 
@@ -247,9 +252,11 @@ public class Construccion : MonoBehaviour
         {
             if (consumirMaterial())
             {
-                Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+                //GameObject instancia = Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+                // generador.GetComponent<GeneradorRecursos>().CmdConstruirBloque(cuadroSeleccionado, posicionX, posicionY);
+                CmdConstruirServidor(cuadroSeleccionado, posicionX, posicionY);
             }
-        
+
 
         }
 
@@ -280,7 +287,10 @@ public class Construccion : MonoBehaviour
         {
             if (consumirMaterial())
             {
-                Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+
+                //GameObject instancia = Instantiate(cuadroSeleccionado, new Vector3(posicionX, posicionY, 0), Quaternion.identity);
+                //generador.GetComponent<GeneradorRecursos>().CmdConstruirBloque(cuadroSeleccionado, posicionX, posicionY);
+                CmdConstruirServidor(cuadroSeleccionado,posicionX,posicionY);
 
             }
 
@@ -405,6 +415,16 @@ public class Construccion : MonoBehaviour
                 return;
             }
         }
+
+
     }
 
+    [Command]
+    void CmdConstruirServidor(GameObject cuadro, float x , float y)
+    {
+        GameObject instancia = Instantiate(cuadro, new Vector3(x,y,0), Quaternion.identity);
+
+        NetworkServer.Spawn(instancia);
+        
+    }
 }

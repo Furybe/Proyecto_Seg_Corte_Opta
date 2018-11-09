@@ -53,8 +53,7 @@ public class Recurso : NetworkBehaviour
 
             //this.DestruirRecurso();
             CmdDestroyGameObject(gameObject);
-            CmdDestroyGameObject(gameObject);
-
+            Debug.Log("xd");
 
             //NetworkBehaviour.Destroy(gameObject);
             //Destroy(gameObject);
@@ -68,6 +67,7 @@ public class Recurso : NetworkBehaviour
     {
         Destroy(gameObject);
         NetworkServer.Destroy(obj);
+        RpcDestroyGameObject(obj);
     }
 
     [ClientRpc]
